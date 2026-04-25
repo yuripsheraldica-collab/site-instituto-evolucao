@@ -76,7 +76,6 @@ h1, h2, h3, h4, h5 {
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 section { padding: 6rem 0; }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -306,7 +305,6 @@ section { padding: 6rem 0; }
   transition: var(--transition);
 }
 .footer-social a:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
-
 .footer-col h5 {
   font-family: var(--font-sans);
   font-size: 0.72rem;
@@ -358,7 +356,7 @@ section { padding: 6rem 0; }
 }
 
 /* ============================================================
-   PAGE HERO (inner pages)
+   PAGE HERO
    ============================================================ */
 .page-hero {
   padding: 10rem 0 5rem;
@@ -447,7 +445,10 @@ section { padding: 6rem 0; }
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ============================================================
    RESPONSIVE
