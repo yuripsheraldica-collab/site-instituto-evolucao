@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Instituto Evolução — Centro multidisciplinar de saúde de alto padrão em Limeira, SP. Medicina, fisioterapia, pilates e fitness integrados."/>
+  <title>Instituto Evolução | Saúde Integral de Alto Padrão — Limeira, SP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      background: var(--dark); padding-top: 72px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,169,110,0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,169,110,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid-lines {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(201,169,110,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,169,110,0.035) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px; border: 1px solid rgba(201,169,110,0.3);
+      border-radius: 50px; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
+      background: rgba(201,169,110,0.07); margin-bottom: 2rem;
+    }
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px;
+      background: #22c55e; border-radius: 50%;
+      animation: pulseDot 2s infinite;
+    }
+    @keyframes pulseDot {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:0.5; transform:scale(1.4); }
+    }
+    .hero-title {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-family: var(--font-serif);
+      color: var(--white); line-height: 1.1; margin-bottom: 1.5rem;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-desc {
+      font-size: 1.1rem; color: rgba(255,255,255,0.65);
+      max-width: 540px; line-height: 1.75; margin-bottom: 2.5rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+    .hero-stats {
+      display: flex; gap: 3rem; flex-wrap: wrap;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-stat-value {
+      font-family: var(--font-serif); font-size: 2rem;
+      color: var(--gold); line-height: 1;
+    }
+    .hero-stat-label { font-size: 0.78rem; color: var(--gray); margin-top: 4px; }
+    .hero-scroll {
+      position: absolute; bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; font-size: 0.68rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--gray);
+    }
+    .hero-scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+      animation: scrollLine 2s ease infinite;
+    }
+    @keyframes scrollLine {
+      0%,100% { opacity:1; transform:scaleY(1); }
+      50%      { opacity:0.4; transform:scaleY(0.6); }
+    }
+
+    /* ===== PROCESSO ===== */
+    #processo { background: var(--dark-2); }
+    .process-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .process-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition);
+    }
+    .process-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }
+    .process-num {
+      font-family: var(--font-serif); font-size: 3rem;
+      color: rgba(201,169,110,0.15); line-height: 1; margin-bottom: 1rem;
+    }
+    .process-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 0.5rem; }
+    .process-card p  { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin: 0; }
+
+    /* ===== INSTITUTO ===== */
+    #instituto { background: var(--dark); }
+    .instituto-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .instituto-text p {
+      font-size: 0.97rem; color: rgba(255,255,255,0.7);
+      line-height: 1.9; margin-bottom: 1.5rem;
+    }
+    .instituto-quote {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1.15rem; color: var(--gold);
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;
+    }
+    .instituto-pillars {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .pillar {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius); padding: 1.25rem; transition: var(--transition);
+    }
+    .pillar:hover { border-color: rgba(201,169,110,0.3); }
+    .pillar h4 { font-size: 0.85rem; color: var(--white); margin-bottom: 0.3rem; }
+    .pillar p  { font-size: 0.78rem; color: var(--gray); line-height: 1.6; margin: 0; }
+    .instituto-visual {
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,169,110,0.15);
+      border-radius: var(--radius-lg); aspect-ratio: 4/5;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; font-size: 5rem; position: relative;
+    }
+    .instituto-visual-label {
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+    }
+    .instituto-tag {
+      position: absolute; bottom: -1rem; right: -1rem;
+      background: var(--gold); color: var(--dark);
+      padding: 0.85rem 1.25rem; border-radius: var(--radius);
+      font-size: 0.8rem; font-weight: 700;
+      text-align: center; line-height: 1.35;
+    }
+
+    /* ===== HISTÓRIA ===== */
+    #historia { background: var(--dark-2); }
+    .historia-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+    .historia-timeline { display: flex; flex-direction: column; gap: 2rem; }
+    .timeline-item { display: flex; gap: 1.5rem; }
+    .timeline-dot {
+      display: flex; flex-direction: column; align-items: center; gap: 0;
+    }
+    .dot {
+      width: 12px; height: 12px; min-height: 12px;
+      border-radius: 50%; background: var(--gold); flex-shrink: 0;
+    }
+    .dot-line {
+      width: 1px; flex: 1; min-height: 40px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+    }
+    .timeline-content h4 {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.35rem;
+    }
+    .timeline-content h3 { font-size: 1rem; color: var(--white); margin-bottom: 0.5rem; }
+    .timeline-content p  { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin: 0; }
+    .historia-text p {
+      font-size: 0.97rem; color: rgba(255,255,255,0.7);
+      line-height: 1.9; margin-bottom: 1.5rem;
+    }
+    .historia-quote {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1.05rem; color: var(--gold);
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;
+    }
+    .historia-diffs {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .historia-diff {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius); padding: 1.25rem; transition: var(--transition);
+    }
+    .historia-diff:hover { border-color: rgba(201,169,110,0.3); }
+    .historia-diff h4 { font-size: 0.85rem; color: var(--gold); margin-bottom: 0.3rem; }
+    .historia-diff p  { font-size: 0.78rem; color: var(--gray); line-height: 1.6; margin: 0; }
+
+    /* ===== EQUIPE ===== */
+    #equipe { background: var(--dark); }
+    .equipe-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 2rem; margin-top: 3rem;
+    }
+    .equipe-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition);
+    }
+    .equipe-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-5px); }
+    .equipe-photo {
+      aspect-ratio: 3/2; background: linear-gradient(135deg, var(--dark-4), var(--dark-3));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; border-bottom: 1px solid rgba(201,169,110,0.1);
+      position: relative;
+    }
+    .equipe-photo-label {
+      position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%);
+      font-size: 0.65rem; color: rgba(201,169,110,0.4);
+      letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;
+    }
+    .equipe-body { padding: 1.75rem; }
+    .equipe-specialty {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
+    }
+    .equipe-body h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 0.2rem; }
+    .equipe-role { font-size: 0.8rem; color: var(--gray); margin-bottom: 1rem; }
+    .equipe-body p  { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 1rem; }
+    .equipe-creds { display: flex; flex-direction: column; gap: 0.3rem; }
+    .equipe-cred {
+      font-size: 0.75rem; color: var(--gray);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .equipe-cred::before { content: '·'; color: var(--gold); }
+    .equipe-together {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.12);
+      border-radius: var(--radius-lg); padding: 2.5rem;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: center; margin-top: 3rem;
+    }
+    .equipe-together h3 { font-size: 1.3rem; color: var(--white); margin-bottom: 1rem; }
+    .equipe-together p  { font-size: 0.9rem; color: var(--gray); line-height: 1.75; }
+    .equipe-together-icons { display: flex; gap: 1rem; font-size: 2rem; justify-content: center; }
+
+    /* ===== METODOLOGIA ===== */
+    #metodologia { background: var(--dark-2); }
+    .metodo-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .metodo-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition);
+    }
+    .metodo-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }
+    .metodo-num {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: rgba(201,169,110,0.4); margin-bottom: 0.75rem;
+    }
+    .metodo-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 0.75rem; }
+    .metodo-card p  { font-size: 0.83rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
+    .metodo-tag {
+      display: inline-block; font-size: 0.7rem; color: var(--gold);
+      background: rgba(201,169,110,0.08); border: 1px solid rgba(201,169,110,0.2);
+      padding: 4px 10px; border-radius: 50px;
+    }
+    /* VS comparison */
+    .vs-section { margin-top: 4rem; }
+    .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .vs-box {
+      background: var(--dark-3); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg); padding: 2rem;
+    }
+    .vs-box.highlight { border-color: rgba(201,169,110,0.25); }
+    .vs-title {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 1.5rem; padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .vs-title.bad  { color: var(--gray); }
+    .vs-title.good { color: var(--gold); }
+    .vs-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.85rem; color: rgba(255,255,255,0.65);
+      padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+      line-height: 1.5;
+    }
+    .vs-item:last-child { border-bottom: none; }
+    .vs-item .icon { flex-shrink: 0; }
+    .vs-item .icon.bad  { color: #f87171; }
+    .vs-item .icon.good { color: #22c55e; }
+
+    /* ===== AMBIENTE ===== */
+    #ambiente { background: var(--dark); }
+    .ambiente-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .ambiente-item {
+      border-radius: var(--radius-lg); overflow: hidden;
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,169,110,0.1);
+      aspect-ratio: 4/3; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.5rem; transition: var(--transition); cursor: default;
+    }
+    .ambiente-item:hover { border-color: rgba(201,169,110,0.3); }
+    .ambiente-item span { font-size: 2.5rem; }
+    .ambiente-item-label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(201,169,110,0.5);
+    }
+    .ambiente-item-sub { font-size: 0.72rem; color: var(--gray); }
+    .ambiente-features {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1rem; margin-top: 2.5rem;
+    }
+    .ambiente-feat {
+      text-align: center; padding: 1.25rem;
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);
+      border-radius: var(--radius); font-size: 0.82rem; color: var(--gray-light);
+      transition: var(--transition);
+    }
+    .ambiente-feat:hover { border-color: rgba(201,169,110,0.25); }
+    .ambiente-feat span { display: block; font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+    /* ===== ESPECIALIDADES ===== */
+    #especialidades { background: var(--dark-2); }
+    .espec-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .espec-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); padding: 2rem;
+      display: flex; flex-direction: column; transition: var(--transition);
+    }
+    .espec-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }
+    .espec-num {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: rgba(201,169,110,0.4); margin-bottom: 0.5rem;
+    }
+    .espec-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .espec-card h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 0.75rem; }
+    .espec-card p  { font-size: 0.85rem; color: var(--gray); line-height: 1.7; flex: 1; margin-bottom: 1.25rem; }
+    .espec-features { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem; }
+    .espec-feat {
+      font-size: 0.8rem; color: rgba(255,255,255,0.55);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .espec-feat::before { content: '✓'; color: var(--gold); font-size: 0.75rem; }
+    .espec-cta-row {
+      display: flex; align-items: center; justify-content: space-between; margin-top: auto;
+    }
+    .espec-link {
+      font-size: 0.8rem; color: var(--gold); font-weight: 600; transition: var(--transition);
+    }
+    .espec-link:hover { color: var(--gold-light); }
+    .espec-quote-box {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);
+      border-radius: var(--radius-lg); padding: 2rem;
+      text-align: center; margin-top: 2rem; grid-column: 1 / -1;
+    }
+    .espec-quote-box p {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1.1rem; color: var(--gold); line-height: 1.65; margin-bottom: 1rem;
+    }
+
+    /* ===== DIFERENCIAIS ===== */
+    #diferenciais { background: var(--dark); }
+    .dif-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .dif-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); padding: 2rem;
+      display: flex; gap: 1.25rem; transition: var(--transition);
+    }
+    .dif-card:hover { border-color: rgba(201,169,110,0.3); }
+    .dif-num {
+      font-family: var(--font-serif); font-size: 2rem;
+      color: rgba(201,169,110,0.2); line-height: 1; min-width: 36px;
+    }
+    .dif-card h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; }
+    .dif-card p  { font-size: 0.83rem; color: var(--gray); line-height: 1.7; margin: 0; }
+
+    /* ===== CASOS / DEPOIMENTOS ===== */
+    #casos { background: var(--dark-2); }
+    .casos-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .caso-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.12);
+      border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition);
+    }
+    .caso-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }
+    .caso-spec {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .caso-card blockquote {
+      font-style: italic; font-size: 0.9rem; color: rgba(255,255,255,0.72);
+      line-height: 1.75; border-left: 2px solid rgba(201,169,110,0.3);
+      padding-left: 1rem; margin-bottom: 1.5rem;
+    }
+    .caso-footer { display: flex; align-items: center; justify-content: space-between; }
+    .caso-author { display: flex; align-items: center; gap: 0.75rem; }
+    .caso-av {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 700; color: var(--dark);
+    }
+    .caso-author-name { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+    .caso-author-role { font-size: 0.75rem; color: var(--gray); }
+    .caso-stats { display: flex; gap: 1.5rem; text-align: right; }
+    .caso-stat-val {
+      font-family: var(--font-serif); font-size: 1.3rem;
+      color: var(--gold); line-height: 1;
+    }
+    .caso-stat-lbl { font-size: 0.7rem; color: var(--gray); }
+
+    /* ===== DEPOIMENTOS ===== */
+    #depoimentos { background: var(--dark); }
+    .depo-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .depo-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); padding: 2rem; transition: var(--transition);
+    }
+    .depo-card:hover { border-color: rgba(201,169,110,0.25); transform: translateY(-4px); }
+    .depo-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .depo-av {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700; color: var(--dark); flex-shrink: 0;
+    }
+    .depo-name { font-size: 0.9rem; font-weight: 600; color: var(--white); }
+    .depo-meta { font-size: 0.75rem; color: var(--gray); }
+    .depo-text { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.75; font-style: italic; }
+    .depo-tag {
+      display: inline-block; margin-top: 1rem;
+      font-size: 0.72rem; color: var(--gold);
+      background: rgba(201,169,110,0.08); border: 1px solid rgba(201,169,110,0.2);
+      padding: 3px 10px; border-radius: 50px;
+    }
+
+    /* ===== BLOG / CONTEÚDO ===== */
+    #conteudo { background: var(--dark-2); }
+    .blog-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 2rem; margin-top: 3rem;
+    }
+    .blog-card {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);
+      border-radius: var(--radius-lg); overflow: hidden;
+      display: flex; flex-direction: column; transition: var(--transition);
+    }
+    .blog-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-5px); }
+    .blog-img {
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, var(--dark-4), var(--dark-3));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem; border-bottom: 1px solid rgba(201,169,110,0.1);
+    }
+    .blog-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-cat {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
+    }
+    .blog-body h3 { font-size: 1rem; color: var(--white); line-height: 1.4; margin-bottom: 0.75rem; }
+    .blog-body p  { font-size: 0.83rem; color: var(--gray); line-height: 1.7; flex: 1; margin-bottom: 1rem; }
+    .blog-meta { display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; color: var(--gray); }
+    .blog-meta a { color: var(--gold); font-weight: 600; transition: var(--transition); }
+
+    /* ===== AGENDAR ===== */
+    #agendar { background: var(--dark); position: relative; overflow: hidden; }
+    #agendar::before {
+      content: ''; position: absolute; top: -40%; left: 50%;
+      transform: translateX(-50%); width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .agendar-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; position: relative; z-index: 1;
+    }
+    .agendar-info h2 { margin-bottom: 1.5rem; }
+    .agendar-info > p { font-size: 0.95rem; color: var(--gray); line-height: 1.75; margin-bottom: 2rem; }
+    .agendar-steps { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
+    .ag-step { display: flex; align-items: flex-start; gap: 1rem; }
+    .ag-step-num {
+      width: 32px; height: 32px; min-width: 32px; border-radius: 50%;
+      border: 1px solid var(--gold); display: flex; align-items: center;
+      justify-content: center; font-size: 0.8rem; font-weight: 700; color: var(--gold);
+    }
+    .ag-step h4 { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
+    .ag-step p  { font-size: 0.8rem; color: var(--gray); margin: 0; }
+    .agendar-contact {
+      margin-top: 2rem; padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .agendar-contact p { font-size: 0.82rem; color: var(--gray); margin-bottom: 0.5rem; }
+    .agendar-contact strong { color: var(--white); }
+    .form-box {
+      background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);
+      border-radius: var(--radius-lg); padding: 2.5rem;
+    }
+    .form-box h3 { font-size: 1.15rem; color: var(--white); margin-bottom: 0.5rem; }
+    .form-box > p { font-size: 0.85rem; color: var(--gray); margin-bottom: 2rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      width: 100%; justify-content: center;
+      margin-top: 0.5rem; padding: 16px; font-size: 0.95rem;
+    }
+    .form-privacy { text-align: center; font-size: 0.75rem; color: var(--gray); margin-top: 0.75rem; }
+    .form-wpp { text-align: center; margin-top: 1.25rem; }
+    .form-wpp a {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; color: #25D366; font-weight: 600; transition: var(--transition);
+    }
+    .form-wpp a:hover { opacity: 0.8; }
+    .form-success { display: none; text-align: center; padding: 3rem 2rem; }
+    .form-success.show { display: block; }
+    .success-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success h3 { color: var(--white); margin-bottom: 0.75rem; }
+    .form-success p  { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:1024px){
+      .process-grid    { grid-template-columns: repeat(2,1fr); }
+      .equipe-grid     { grid-template-columns: repeat(2,1fr); }
+      .metodo-grid     { grid-template-columns: repeat(2,1fr); }
+      .espec-grid      { grid-template-columns: repeat(2,1fr); }
+      .ambiente-features { grid-template-columns: repeat(2,1fr); }
+      .ambiente-grid   { grid-template-columns: repeat(2,1fr); }
+    }
+    @media(max-width:768px){
+      .instituto-layout,
+      .historia-layout,
+      .agendar-layout  { grid-template-columns: 1fr; gap: 3rem; }
+      .instituto-pillars,
+      .historia-diffs  { grid-template-columns: 1fr; }
+      .equipe-grid,
+      .espec-grid,
+      .metodo-grid,
+      .depo-grid,
+      .casos-grid,
+      .blog-grid,
+      .dif-grid        { grid-template-columns: 1fr; }
+      .vs-grid         { grid-template-columns: 1fr; }
+      .ambiente-grid   { grid-template-columns: 1fr; }
+      .process-grid    { grid-template-columns: 1fr; }
+      .form-row        { grid-template-columns: 1fr; }
+      .equipe-together { grid-template-columns: 1fr; }
+      .hero-stats      { gap: 1.5rem; }
+      .instituto-tag   { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-main">Instituto Evolução</span>
+    <span class="nav-logo-sub">Fitness · Health</span>
+  </a>
+  <div class="nav-links">
+    <a href="#instituto">O Instituto</a>
+    <a href="equipe.html">Equipe</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#especialidades">Especialidades</a>
+    <a href="#depoimentos">Experiências</a>
+    <a href="blog.html">Blog</a>
+    <a href="#agendar" class="btn btn-primary nav-cta">Agendar</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#instituto"      onclick="closeMobile()">O Instituto</a>
+  <a href="equipe.html"     onclick="closeMobile()">Equipe</a>
+  <a href="#metodologia"    onclick="closeMobile()">Metodologia</a>
+  <a href="#especialidades" onclick="closeMobile()">Especialidades</a>
+  <a href="#depoimentos"    onclick="closeMobile()">Experiências</a>
+  <a href="blog.html"       onclick="closeMobile()">Blog</a>
+  <a href="#agendar" class="btn btn-primary" onclick="closeMobile()">Agendar avaliação</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">Vagas disponíveis — Agenda limitada esta semana</div>
+      <p style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem;">Particular · Alto Padrão · Humanizado</p>
+      <h1 class="hero-title">Saúde de verdade começa com quem <em>te escuta.</em></h1>
+      <p class="hero-desc">Centro multidisciplinar em Limeira que integra medicina, fisioterapia, pilates e fitness num único espaço premium — sem filas, sem pressa, sem concessões.</p>
+      <div class="hero-actions">
+        <a href="#agendar" class="btn btn-primary">Agendar avaliação</a>
+        <a href="#instituto" class="btn btn-secondary">Conheça o instituto</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">+500</div>
+          <div class="hero-stat-label">Pacientes atendidos</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">5</div>
+          <div class="hero-stat-label">Especialidades integradas</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">100%</div>
+          <div class="hero-stat-label">Atendimento particular</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">0</div>
+          <div class="hero-stat-label">Minutos de espera</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- ==================== PROCESSO ==================== -->
+<section id="processo">
+  <div class="container">
+    <div class="section-label">O processo</div>
+    <h2 class="section-title">Como funciona <em>na prática</em></h2>
+    <p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.7;">Do primeiro contato ao resultado — um processo pensado para eliminar fricção e maximizar a sua experiência de saúde.</p>
+    <div class="process-grid reveal">
+      <div class="process-card">
+        <div class="process-num">01</div>
+        <h3>Agendamento</h3>
+        <p>Você entra em contato via WhatsApp ou formulário. Respondemos em até 2 horas e confirmamos sua consulta sem burocracia.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">02</div>
+        <h3>Avaliação inicial</h3>
+        <p>Consulta completa e sem pressa. Ouvimos sua história, entendemos seus objetivos e examinamos com cuidado genuíno.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">03</div>
+        <h3>Plano integrado</h3>
+        <p>Nossa equipe multidisciplinar traça um plano personalizado que une todas as especialidades necessárias para você.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-num">04</div>
+        <h3>Acompanhamento</h3>
+        <p>Monitoramos sua evolução continuamente, ajustando o plano e celebrando cada resultado conquistado junto com você.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="#agendar" class="btn btn-primary">Começar agora →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INSTITUTO ==================== -->
+<section id="instituto">
+  <div class="container">
+    <div class="instituto-layout">
+      <div class="instituto-text reveal">
+        <div class="section-label">Nossa essência</div>
+        <h2 class="section-title">Cuidar de pessoas exige mais do que <em>técnica.</em></h2>
+        <p>Vivemos em um mundo que trata saúde como commodity. Filas, pressa, consultas cronometradas, planos que limitam. O Instituto Evolução existe para ser o oposto disso.</p>
+        <p>Aqui, cada paciente é recebido por um ambiente pensado nos mínimos detalhes. Profissionais que têm tempo para ouvir, para entender, para tratar você como indivíduo único — não como um número de prontuário.</p>
+        <p>Somos particular por escolha, não por limitação. Porque acreditamos que um atendimento verdadeiro precisa de tempo, estrutura e comprometimento sem concessões.</p>
+        <div class="instituto-quote">"Você não está aqui para ser atendido. Está aqui para evoluir."</div>
+        <div class="instituto-pillars">
+          <div class="pillar">
+            <h4>Humanização real</h4>
+            <p>Cada paciente tem uma história. Ouvimos antes de receitar, entendemos antes de tratar.</p>
+          </div>
+          <div class="pillar">
+            <h4>Visão integral</h4>
+            <p>Corpo e mente conectados. Tratamos o todo, não partes isoladas de uma equação complexa.</p>
+          </div>
+          <div class="pillar">
+            <h4>Excelência sem exceção</h4>
+            <p>Do ambiente à equipe, cada detalhe é deliberado. Padrão alto não é opção — é princípio.</p>
+          </div>
+          <div class="pillar">
+            <h4>Particular por princípio</h4>
+            <p>Sem convênios significa sem limitações de tempo, procedimento ou dedicação.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="position:relative;">
+        <div class="instituto-visual">
+          🏛️
+          <div class="instituto-visual-label">Instituto Evolução</div>
+          <div class="instituto-tag">Particular<br>por escolha</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HISTÓRIA ==================== -->
+<section id="historia">
+  <div class="container">
+    <div class="historia-layout">
+      <div class="reveal">
+        <div class="section-label">Nossa história</div>
+        <h2 class="section-title">Um projeto construído sobre <em>propósito.</em></h2>
+        <div class="historia-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"><div class="dot"></div><div class="dot-line"></div></div>
+            <div class="timeline-content">
+              <h4>A origem</h4>
+              <h3>A percepção de um problema</h3>
+              <p>Fundado por profissionais que vivenciaram a deterioração do atendimento em saúde. A pergunta que nos movia: por que o padrão de excelência era exceção?</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><div class="dot"></div><div class="dot-line"></div></div>
+            <div class="timeline-content">
+              <h4>A construção</h4>
+              <h3>Projeto do espaço e da equipe</h3>
+              <p>Cada metro quadrado e cada profissional escolhidos com um critério único: excelência sem negociação. Ambiente projetado para transmitir calma e confiança.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><div class="dot"></div></div>
+            <div class="timeline-content">
+              <h4>Hoje</h4>
+              <h3>Referência em Limeira</h3>
+              <p>Uma comunidade de pacientes que encontraram no Instituto Evolução o padrão de cuidado que sempre mereceram.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="historia-text reveal">
+        <p>O Instituto Evolução nasceu de uma insatisfação legítima. Seus fundadores, profissionais de saúde com décadas de experiência combinada, cansaram-se de ver pacientes tratados como números em um sistema que prioriza velocidade em detrimento de qualidade.</p>
+        <p>A proposta foi clara desde o início: criar um espaço onde o atendimento particular seria sinônimo de tempo real, escuta genuína e tratamento integrado — não apenas de mensalidades mais altas.</p>
+        <p>Hoje, o Instituto Evolução é referência em Limeira e região, onde medicina, fisioterapia, pilates e fitness coexistem em plena integração clínica, com profissionais que se comunicam e constroem planos de tratamento conjuntos para cada paciente.</p>
+        <div class="historia-quote">"Nosso compromisso é com a evolução de cada paciente — não com a velocidade de um prontuário."<br/><small style="font-size:0.75rem;color:var(--gray);font-style:normal;">— Equipe Instituto Evolução</small></div>
+        <div class="historia-diffs">
+          <div class="historia-diff"><h4>Particular por princípio</h4><p>Sem convênios significa sem limitações de tempo, procedimento ou dedicação.</p></div>
+          <div class="historia-diff"><h4>Integração multidisciplinar</h4><p>Médico, fisioterapeuta e educador físico trocam informações e constroem planos conjuntos.</p></div>
+          <div class="historia-diff"><h4>Ambiente projetado</h4><p>Espaço concebido com foco na experiência do paciente. Conforto e sofisticação em cada detalhe.</p></div>
+          <div class="historia-diff"><h4>Agenda com respeito</h4><p>Horário marcado é horário cumprido. Zero espera é uma política — não uma meta.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EQUIPE ==================== -->
+<section id="equipe">
+  <div class="container">
+    <div class="section-label">As pessoas por trás do Instituto</div>
+    <h2 class="section-title">A equipe que faz <em>a diferença</em></h2>
+    <p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;">Profissionais escolhidos não apenas pelo currículo, mas pela filosofia. Cada membro compartilha o mesmo compromisso com excelência e humanização.</p>
+    <div class="equipe-grid reveal">
+      <div class="equipe-card">
+        <div class="equipe-photo">👨‍⚕️<div class="equipe-photo-label">Clínica Médica</div></div>
+        <div class="equipe-body">
+          <div class="equipe-specialty">🩺 Medicina</div>
+          <h3>Dr(a). [Nome Completo]</h3>
+          <div class="equipe-role">Médico(a) Clínico(a)</div>
+          <p>Especialista em medicina preventiva e saúde integral. Atua com foco na investigação completa do paciente, unindo dados laboratoriais à escuta clínica aprofundada.</p>
+          <div class="equipe-creds">
+            <span class="equipe-cred">CRM: [número] — [Estado]</span>
+            <span class="equipe-cred">Especialização em medicina preventiva</span>
+            <span class="equipe-cred">+10 anos de experiência clínica</span>
+          </div>
+        </div>
+      </div>
+      <div class="equipe-card">
+        <div class="equipe-photo">🧑‍⚕️<div class="equipe-photo-label">Fisioterapia</div></div>
+        <div class="equipe-body">
+          <div class="equipe-specialty">🦴 Fisioterapia</div>
+          <h3>Dr(a). [Nome Completo]</h3>
+          <div class="equipe-role">Fisioterapeuta</div>
+          <p>Especialista em reabilitação funcional e ortopédica. Combina técnicas manuais avançadas com protocolos baseados em evidência para resultados duradouros.</p>
+          <div class="equipe-creds">
+            <span class="equipe-cred">CREFITO: [número]</span>
+            <span class="equipe-cred">Especialização ortopédica e esportiva</span>
+            <span class="equipe-cred">+10 anos de experiência</span>
+          </div>
+        </div>
+      </div>
+      <div class="equipe-card">
+        <div class="equipe-photo">🧑‍🏫<div class="equipe-photo-label">Pilates & Fitness</div></div>
+        <div class="equipe-body">
+          <div class="equipe-specialty">🤸 Pilates & Fitness</div>
+          <h3>[Nome Completo]</h3>
+          <div class="equipe-role">Educador(a) Físico(a)</div>
+          <p>Especialista em método Pilates e treinamento funcional. Une conhecimento biomecânico à percepção individual de cada aluno para prescrições precisas e eficazes.</p>
+          <div class="equipe-creds">
+            <span class="equipe-cred">CREF: [número]</span>
+            <span class="equipe-cred">Certificação Pilates [método]</span>
+            <span class="equipe-cred">+8 anos de experiência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="equipe-together reveal">
+      <div>
+        <h3>Uma equipe que <em style="color:var(--gold);font-style:italic;">se comunica</em></h3>
+        <p>O diferencial não está apenas em cada profissional individualmente — está em como eles trabalham juntos. Reuniões clínicas periódicas, prontuários integrados e protocolos compartilhados garantem que seu tratamento seja verdadeiramente holístico.</p>
+        <div style="margin-top:1.5rem;">
+          <a href="equipe.html" class="btn btn-outline-gold">Conhecer a equipe →</a>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <div class="equipe-together-icons">🩺 🦴 🤸</div>
+        <p style="font-size:0.8rem;color:var(--gold);margin-top:1rem;font-weight:600;">Medicina · Fisioterapia · Fitness</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== METODOLOGIA ==================== -->
+<section id="metodologia">
+  <div class="container">
+    <div class="section-label">Nossa abordagem</div>
+    <h2 class="section-title">O Método <em>Evolução</em></h2>
+    <p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;">Uma abordagem sistêmica que trata você como um indivíduo completo — não como um conjunto de sintomas isolados.</p>
+    <div class="metodo-grid reveal">
+      <div class="metodo-card">
+        <div class="metodo-num">01</div>
+        <h3>Avaliação completa</h3>
+        <p>A primeira consulta não tem pressa. Anamnese aprofundada, exame físico minucioso e, quando indicado, pedido de exames complementares.</p>
+        <span class="metodo-tag">60 a 90 minutos</span>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">02</div>
+        <h3>Diagnóstico integrado</h3>
+        <p>Os profissionais envolvidos se reúnem para cruzar informações e construir um diagnóstico que considera o indivíduo por inteiro.</p>
+        <span class="metodo-tag">Visão multidisciplinar</span>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">03</div>
+        <h3>Plano personalizado</h3>
+        <p>Nenhum protocolo genérico. O plano é construído especificamente para você, com metas claras, etapas definidas e flexibilidade para ajustes.</p>
+        <span class="metodo-tag">Exclusivo para você</span>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">04</div>
+        <h3>Acompanhamento contínuo</h3>
+        <p>Resultados são monitorados e o plano revisado periodicamente. Você sempre sabe onde está na sua jornada e o que esperar a seguir.</p>
+        <span class="metodo-tag">Resultados mensuráveis</span>
+      </div>
+    </div>
+    <!-- VS -->
+    <div class="vs-section reveal">
+      <h3 style="font-size:1.3rem;color:var(--white);margin-bottom:2rem;">Instituto Evolução <em style="color:var(--gold);font-style:italic;">vs</em> clínicas convencionais</h3>
+      <div class="vs-grid">
+        <div class="vs-box">
+          <div class="vs-title bad">Clínicas convencionais</div>
+          <div class="vs-item"><span class="icon bad">✕</span><span>Consultas de 10–15 minutos cronometrados</span></div>
+          <div class="vs-item"><span class="icon bad">✕</span><span>Profissionais que não se comunicam entre si</span></div>
+          <div class="vs-item"><span class="icon bad">✕</span><span>Protocolos genéricos para todos os pacientes</span></div>
+          <div class="vs-item"><span class="icon bad">✕</span><span>Espera de 30–60 min mesmo com hora marcada</span></div>
+          <div class="vs-item"><span class="icon bad">✕</span><span>Foco em sintomas, não no indivíduo</span></div>
+        </div>
+        <div class="vs-box highlight">
+          <div class="vs-title good">Instituto Evolução</div>
+          <div class="vs-item"><span class="icon good">✓</span><span>Consultas com a duração que o paciente precisa</span></div>
+          <div class="vs-item"><span class="icon good">✓</span><span>Equipe integrada com comunicação constante</span></div>
+          <div class="vs-item"><span class="icon good">✓</span><span>Plano individual construído para você</span></div>
+          <div class="vs-item"><span class="icon good">✓</span><span>Zero espera — seu horário é respeitado</span></div>
+          <div class="vs-item"><span class="icon good">✓</span><span>Visão integral do ser humano</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AMBIENTE ==================== -->
+<section id="ambiente">
+  <div class="container">
+    <div class="section-label">Estrutura & Tecnologia</div>
+    <h2 class="section-title">Um ambiente <em>diferente</em></h2>
+    <p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;">Cada detalhe do espaço foi pensado para criar uma experiência que vai além do tratamento.</p>
+    <div class="ambiente-grid reveal">
+      <div class="ambiente-item"><span>🏛️</span><div class="ambiente-item-label">Recepção</div><div class="ambiente-item-sub">Entrada · sala de espera</div></div>
+      <div class="ambiente-item"><span>💪</span><div class="ambiente-item-label">Academia</div><div class="ambiente-item-sub">Área fitness premium</div></div>
+      <div class="ambiente
