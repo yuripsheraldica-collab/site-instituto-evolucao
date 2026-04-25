@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Pilates de alto padrão com turmas reduzidas — Instituto Evolução, Limeira SP"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Pilates | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Layout principal ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 5rem; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--dark-3), var(--dark-4));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); aspect-ratio: 4/5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; font-size: 5rem; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-badge-float {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; bottom: -1rem; right: -1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--gold); color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.25rem; border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.82rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; line-height: 1.3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-text p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.97rem; color: rgba(255,255,255,0.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.9; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 2px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Features list ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-features-list { display: flex; flex-direction: column; gap: 0.75rem; margin: 2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item:hover { border-color: rgba(201,169,110,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item h4 { font-size: 0.9rem; color: var(--white); margin-bottom: 0.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Modalidades grid ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidades-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); position: relative; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-card::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: ''; position: absolute; top: 0; left: 0; right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 2px; background: linear-gradient(90deg, var(--gold), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-card:hover::before { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-icon { font-size: 2rem; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-card p<span class="Apple-converted-space">  </span>{ font-size: 0.83rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-list { display: flex; flex-direction: column; gap: 0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-list span {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem; color: rgba(255,255,255,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.modalidade-list span::before { content: '✓'; color: var(--gold); font-size: 0.7rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Perfis de aluno ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.perfis-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.perfil-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.perfil-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.perfil-card span { display: block; font-size: 2.5rem; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.perfil-card h4 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.perfil-card p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.7; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Princípios do método ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.principios-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.principio-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.principio-card:hover { border-color: rgba(201,169,110,0.25); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.principio-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; margin-bottom: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.principio-card h4 { font-size: 0.92rem; color: var(--gold); margin-bottom: 0.4rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.principio-card p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.7; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Resultados / estatísticas ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultados-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-card:hover { border-color: rgba(201,169,110,0.25); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-valor {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gold); line-height: 1; margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-label { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Processo / como funciona ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.processo-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.processo-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.processo-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.processo-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.processo-card h4 { font-size: 0.92rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.processo-card p<span class="Apple-converted-space">  </span>{ font-size: 0.8rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Depoimentos ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '"'; font-family: var(--font-serif); font-size: 6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.08); position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: -1rem; left: 1.5rem; line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque blockquote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic; font-size: 1.05rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.8); line-height: 1.8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem; position: relative; z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque-author { display: flex; align-items: center; gap: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-av {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 44px; height: 44px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--gold-dark), var(--gold));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem; font-weight: 700; color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-name { font-size: 0.9rem; font-weight: 600; color: var(--white); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-meta { font-size: 0.75rem; color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Info box ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(201,169,110,0.07); border: 1px solid rgba(201,169,110,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); padding: 1.5rem 2rem; margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box h4 { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box p<span class="Apple-converted-space">  </span>{ font-size: 0.88rem; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.75; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== FAQ ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.5rem; cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem; font-weight: 600; color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question:hover { color: var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-arrow { font-size: 0.8rem; color: var(--gold); transition: var(--transition); flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-arrow { transform: rotate(180deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height: 0; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: max-height 0.4s ease, padding 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer p { font-size: 0.88rem; color: var(--gray); line-height: 1.75; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Outras especialidades ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outras-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.5rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card span { display: block; font-size: 2rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card h4 { font-size: 0.88rem; color: var(--white); margin-bottom: 0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card p<span class="Apple-converted-space">  </span>{ font-size: 0.75rem; color: var(--gray); line-height: 1.6; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Responsive ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.modalidades-grid { grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.perfis-grid<span class="Apple-converted-space">      </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.principios-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.resultados-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.processo-grid<span class="Apple-converted-space">    </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.outras-grid<span class="Apple-converted-space">      </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.esp-layout <span class="Apple-converted-space">      </span>{ grid-template-columns: 1fr; gap: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.modalidades-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.perfis-grid<span class="Apple-converted-space">      </span>{ grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.principios-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.resultados-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.processo-grid<span class="Apple-converted-space">    </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.outras-grid<span class="Apple-converted-space">      </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.esp-badge-float<span class="Apple-converted-space">  </span>{ display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NAVBAR ==================== --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades" class="active"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#agendar" class="btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto"<span class="Apple-converted-space">      </span>onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#equipe" <span class="Apple-converted-space">        </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html" <span class="Apple-converted-space">                </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#agendar" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PAGE HERO ==================== --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Pilates</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="margin-bottom:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="badge badge-gold"&gt;🤸 Especialidade 05&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title" style="max-width:660px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Pilates com método, &lt;em&gt;resultado e cuidado&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Ambiente exclusivo, turmas de no máximo 4 alunos, instrutores certificados e integração clínica real — para resultados que vão além do que você imagina ser possível.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar aula experimental →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#modalidades" class="btn btn-secondary"&gt;Ver modalidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== SOBRE ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-layout reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Método Pilates&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Pilates que vai além do &lt;em&gt;alongamento&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Existe um equívoco comum sobre o Pilates: a ideia de que é uma prática suave, quase passiva, voltada exclusivamente para flexibilidade. A realidade é profundamente diferente. O método Pilates é uma das ferramentas mais completas de desenvolvimento físico existentes — quando aplicado com conhecimento real e atenção individualizada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;No Instituto Evolução, o Pilates é prescrito como parte de um cuidado integral. Turmas com no máximo 4 alunos garantem que o instrutor conheça cada corpo, cada limitação e cada objetivo. Integração com médico e fisioterapeuta garante que cada exercício tenha intenção clínica — não apenas estética.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Fiz Pilates em outros lugares. Aqui é diferente — atenção, método, resultado. Não tem comparação."</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="font-size:0.78rem;color:var(--gray);margin-top:0.5rem;font-style:normal;"&gt;— Renata L., paciente há 1 ano e meio&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar aula experimental&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="artigo-pilates-atletico.html" class="btn btn-outline-gold"&gt;Ler sobre Pilates atlético →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>🤸</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-visual-label"&gt;Pilates · IE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-badge-float"&gt;Máx. 4&lt;br&gt;alunos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NÚMEROS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Em números&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O Pilates IE em &lt;em&gt;dados reais&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="resultados-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;4&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;alunos por turma no máximo — atenção real em cada aula&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;100%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;das prescrições são individualizadas com base em avaliação prévia&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;+150&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;alunos que transformaram postura, dor e qualidade de vida&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;modalidades disponíveis — solo, aparelhos e clínico integrado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== MODALIDADES ==================== --&gt;</p>
+<p class="p1">&lt;section id="modalidades" style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Modalidades disponíveis&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Qual Pilates é &lt;em&gt;para você&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Oferecemos três modalidades complementares, cada uma com foco e aplicação distintos — todas com o mesmo padrão de atenção e qualidade.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="modalidades-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="modalidade-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalidade-icon"&gt;🧘&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Pilates Solo&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Trabalho no mat (solo) com uso de pequenos implementos como bola, elástico e anel. Ideal para desenvolver consciência corporal, mobilidade e força de core com progressão estruturada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalidade-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Turmas de até 4 alunos&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Progressão individualizada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Implementos de alta qualidade&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ideal para iniciantes e intermediários&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="modalidade-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalidade-icon"&gt;⚙️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Pilates em Aparelhos&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Trabalho no Reformer, Cadillac, Chair e outros aparelhos clássicos do método. Permite maior variação de exercícios, resistência ajustável e trabalho de cadeias musculares completas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalidade-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Aparelhos de alto padrão&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Resistência progressiva e controlada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Maior especificidade de trabalho muscular&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ideal para intermediários e avançados&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="modalidade-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalidade-icon"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Pilates Clínico&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Modalidade terapêutica com prescrição integrada ao prontuário do paciente. Indicado pelo médico ou fisioterapeuta do Instituto para casos de reabilitação, gestação ou condições clínicas específicas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modalidade-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Prescrição médica ou fisioterápica&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Protocolo adaptado à condição clínica&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Comunicação direta com a equipe&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ideal para reabilitação e casos especiais&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PRINCÍPIOS DO MÉTODO ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;O método&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Os princípios que &lt;em&gt;guiam cada aula&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>O método Pilates é fundamentado em princípios biomecânicos e filosóficos que tornam cada exercício intencional — não apenas uma sequência de movimentos.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="principios-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="principio-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="principio-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Centralização (Core)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Todo movimento parte do centro do corpo — o "powerhouse". Abdômen, glúteos e assoalho pélvico como base de toda ação motora estável e eficiente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="principio-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="principio-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Concentração&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Mente presente em cada movimento. O Pilates exige foco total — não é possível realizá-lo no piloto automático. Isso desenvolve conexão real entre mente e corpo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="principio-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="principio-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Controle&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Qualidade acima de quantidade. Cada exercício é executado com controle total — eliminando compensações e garantindo que o músculo certo trabalhe no momento certo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="principio-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="principio-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Precisão&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Cada detalhe de posicionamento importa. Milímetros de ajuste fazem diferença no recrutamento muscular e na eficácia do exercício — daí a importância de turmas reduzidas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="principio-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="principio-num"&gt;05&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Respiração&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;A respiração é parte do exercício — não apenas suporte. Padrões respiratórios corretos ativam músculos profundos, reduzem tensão e otimizam o desempenho global.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="principio-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="principio-num"&gt;06&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Fluxo&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Movimentos contínuos, fluidos e conectados entre si. O corpo aprende padrões de movimento eficientes que se transferem para as atividades cotidianas e esportivas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PARA QUEM É ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Para quem é o Pilates IE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O Pilates serve para &lt;em&gt;todos&lt;/em&gt; — do seu jeito&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>O método é adaptável a qualquer perfil, condicionamento ou condição clínica. A questão não é "se" o Pilates serve para você — mas qual modalidade e abordagem são mais adequadas ao seu momento.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="perfis-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="perfil-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🧑‍💼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Quem passa muito tempo sentado&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Profissionais com rotinas sedentárias que acumulam tensão na lombar, cervical e ombros. O Pilates reverte padrões posturais nocivos e devolve funcionalidade ao corpo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="perfil-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🏃&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Atletas e praticantes de esporte&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Para prevenir lesões, otimizar padrões de movimento e acelerar recuperação. O Pilates complementa qualquer modalidade esportiva com ganhos de controle e estabilidade.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="perfil-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🤰&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Gestantes e puérperas&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Pilates clínico adaptado para gestação e recuperação pós-parto, com segurança e benefícios amplamente documentados para mãe e bebê.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="perfil-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🦴&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Pacientes em reabilitação&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Para quem está em processo de recuperação pós-cirúrgica, pós-lesão ou em tratamento com a fisioterapia do Instituto — com integração total de protocolos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="perfil-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🧓&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Terceira idade&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Manutenção de equilíbrio, força funcional e mobilidade para uma vida independente e ativa. O Pilates é uma das práticas mais indicadas para longevidade saudável.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="perfil-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🌱&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Iniciantes sem experiência&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Nunca praticou nenhuma atividade física? O Pilates é um dos melhores pontos de partida — progressivo, seguro e com aprendizado genuíno sobre o próprio corpo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== COMO FUNCIONA ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Seu primeiro passo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Como é começar o Pilates &lt;em&gt;no Instituto Evolução&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="processo-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="processo-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="processo-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Agendamento&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Entre em contato via formulário ou WhatsApp. Respondemos em até 2 horas e agendamos sua avaliação inicial.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="processo-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="processo-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Avaliação inicial&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação postural, de mobilidade e de histórico clínico para identificar o melhor ponto de partida e a modalidade mais adequada ao seu caso.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="processo-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="processo-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Aula experimental&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Sua primeira aula já é supervisionada individualmente — sem pressa, sem julgamento, com foco em sentir o método e entender o que ele pode fazer por você.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="processo-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="processo-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Protocolo e evolução&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;A partir da avaliação e da aula experimental, definimos seu protocolo, frequência ideal e progressão — com reavaliações periódicas para celebrar cada conquista.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box" style="margin-top:3rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4&gt;🔗 Integração com médico e fisioterapeuta&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Se você é paciente de medicina ou fisioterapia no Instituto, o instrutor de Pilates tem acesso ao seu prontuário e se comunica diretamente com os demais profissionais. Isso garante que o Pilates potencialize seu tratamento — e nunca conflite com ele. Uma raridade no mercado de saúde brasileiro.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== DIFERENCIAIS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Por que somos diferentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que separa o Pilates IE de &lt;em&gt;qualquer outro&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-features-list reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;👥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Máximo de 4 alunos por turma&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Enquanto estúdios convencionais colocam 8, 10, 15 alunos por turma, limitamos a 4. O instrutor conhece cada corpo, cada limitação, cada objetivo. Atenção real não é slogan — é política.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Indicação e integração clínica real&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Quando o médico ou fisioterapeuta do Instituto indica Pilates, o instrutor recebe as diretrizes do caso e adapta o protocolo. Você não precisa traduzir um laudo para o seu professor — ele já sabe.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;📋&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Prescrição baseada em avaliação real&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Nenhuma aula começa sem uma avaliação. Postura, mobilidade, histórico e objetivos são mapeados antes do primeiro exercício. A progressão é construída sobre dados — não suposições.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🏠&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Ambiente exclusivo e premium&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sala de Pilates projetada exclusivamente para o método — com equipamentos de alto padrão, climatização individual e privacidade garantida em cada sessão.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Instrutor certificado com formação sólida&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Certificação em método reconhecido internacionalmente, com formação em biomecânica e atualização contínua. Conhecimento que se traduz em qualidade real de instrução.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;📈&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Reavaliações e progressão estruturada&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Você não fica no mesmo nível para sempre. Reavaliações periódicas garantem que sua progressão seja contínua, segura e documentada — com celebração de cada marco atingido.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== DEPOIMENTOS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Experiências reais&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que nossos alunos &lt;em&gt;vivenciaram&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="depo-destaque reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Fiz Pilates em outros lugares. Aqui é completamente diferente. A atenção que o instrutor dá para cada aluno é algo que eu nunca tinha experimentado. Ele conhece meu corpo melhor do que eu. Em 6 meses, resolvi uma dor lombar crônica que me acompanhava há 3 anos e que nenhum outro tratamento tinha conseguido eliminar."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-av"&gt;RL&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-name"&gt;Renata L.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-meta"&gt;Pilates IE · 1 ano e meio de prática&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-left:auto;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="color:var(--gold);letter-spacing:2px;font-size:0.9rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque reveal" style="padding:1.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote style="font-size:0.92rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Vim pela postura, fiquei pelo cuidado. O ambiente é aconchegante, o instrutor é atencioso e o método realmente funciona. Me sinto ouvida de verdade — não só mais uma aluna numa turma lotada."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-av"&gt;AC&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-name"&gt;Ana C.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-meta"&gt;Pilates + Consulta Médica · 2 anos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.85rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque reveal" style="padding:1.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote style="font-size:0.92rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Comecei o Pilates durante a gestação e continuo até hoje, 1 ano após o parto. A diferença na minha recuperação pós-parto foi impressionante. O instrutor foi cuidadoso em cada fase e adaptou tudo perfeitamente."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-av"&gt;CS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-name"&gt;Camila S.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-meta"&gt;Pilates Clínico gestacional · 1,5 anos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.85rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FAQ ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Dúvidas frequentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Perguntas &lt;em&gt;comuns&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="faq-list"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Preciso ter experiência prévia com Pilates para começar?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Não. Iniciantes são muito bem-vindos e, na prática, têm uma vantagem: aprendem o método sem vícios de prática anterior. A avaliação inicial identifica exatamente seu ponto de partida e o programa começa de lá — com progressão adequada ao seu ritmo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Com que frequência devo praticar Pilates?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Joseph Pilates recomendava a prática de 3 vezes por semana para resultados ideais. Na prática, 2 sessões semanais já produzem resultados consistentes para a maioria dos objetivos. Para casos clínicos ou de reabilitação, a frequência pode ser maior — definida em conjunto com médico ou fisioterapeuta.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Pilates é indicado durante a gravidez?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim, com as adaptações adequadas. O Pilates clínico gestacional é amplamente reconhecido como seguro e benéfico durante a gestação — melhora dores lombares, prepara o corpo para o parto e facilita a recuperação no pós-parto. No Instituto, a prática gestacional é acompanhada em integração com o médico da paciente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Qual a diferença entre Pilates solo e em aparelhos?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;O Pilates solo utiliza o peso do próprio corpo e pequenos acessórios, sendo excelente para consciência corporal e mobilidade. O Pilates em aparelhos (especialmente o Reformer) permite ajuste de resistência, maior variedade de exercícios e trabalho mais específico de grupos musculares. As duas modalidades são complementares — e muitos alunos praticam as duas ao longo da semana.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso fazer Pilates se tenho hérnia de disco ou artrose?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim, e frequentemente é exatamente o que se indica nesses casos. O Pilates clínico adapta os exercícios à sua condição específica, fortalecendo a musculatura de suporte e reduzindo a carga sobre as estruturas comprometidas. Recomendamos que nesses casos a indicação seja feita pelo médico ou fisioterapeuta do Instituto para garantir a integração adequada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>As turmas têm realmente no máximo 4 alunos?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim, sem exceção. Esse limite não é marketing — é uma política estrutural do Instituto. Acima de 4 alunos, a qualidade de atenção individual cai inevitavelmente. Preferimos ter menos turmas e manter o padrão do que expandir a capacidade e comprometer a entrega.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== OUTRAS ESPECIALIDADES ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Explore também&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Outras &lt;em&gt;especialidades&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="outras-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-medica.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🩺&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Consultas Médicas&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Atendimento clínico completo e sem pressa.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-laboratorio.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🔬&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Laboratório&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Exames completos integrados ao prontuário.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-fisioterapia.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🦴&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Fisioterapia&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reabilitação funcional individualizada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-academia.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;💪&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Academia&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Fitness de alto padrão com prescrição profissional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CTA ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="justify-content:center;"&gt;Próximo passo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Pronto para começar sua &lt;em&gt;jornada no Pilates?&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:500px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Agende sua aula experimental. Sem compromisso, sem pressão — apenas a experiência de descobrir o que o Pilates pode fazer pelo seu corpo.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar aula experimental →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FOOTER ==================== --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" aria-label="Instagram"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" aria-label="WhatsApp"&gt;WA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" aria-label="Localização"&gt;📍&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;O Instituto&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#instituto"&gt;Nossa história&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#metodologia"&gt;Metodologia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#ambiente"&gt;Estrutura&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Especialidades&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-medica.html"&gt;Consultas Médicas&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-laboratorio.html"&gt;Laboratório&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-fisioterapia.html"&gt;Fisioterapia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-academia.html"&gt;Academia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-pilates.html"&gt;Pilates&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Contato&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="blog.html"&gt;Blog / Insights&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank"&gt;Como chegar&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Instituto Evolução — Todos os direitos reservados · Limeira, SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WhatsApp Float --&gt;</p>
+<p class="p1">&lt;a href="https://wa.me/5519900000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg viewBox="0 0 24 24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/svg&gt;</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Navbar scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navbar.classList.toggle('scrolled', window.scrollY &gt; 40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hamburger</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hamburger = document.getElementById('hamburger');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navMobile = document.getElementById('navMobile');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hamburger.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMobile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// FAQ accordion</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function toggleFaq(el) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const item = el.parentElement;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isOpen = item.classList.contains('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.faq-item').forEach(i =&gt; i.classList.remove('open'));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!isOpen) item.classList.add('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Scroll reveal</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reveals = document.querySelectorAll('.reveal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries.forEach(e =&gt; { if (e.isIntersecting) e.target.classList.add('visible'); });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, { threshold: 0.1 });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>reveals.forEach(r =&gt; observer.observe(r));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

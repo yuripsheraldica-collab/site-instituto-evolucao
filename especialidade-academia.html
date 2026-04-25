@@ -1,0 +1,852 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Academia de alto padrão com acompanhamento profissional — Instituto Evolução, Limeira SP"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Academia | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Layout principal ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 5rem; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--dark-3), var(--dark-4));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); aspect-ratio: 4/5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; font-size: 5rem; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-badge-float {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; bottom: -1rem; right: -1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--gold); color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.25rem; border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.82rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; line-height: 1.3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-text p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.97rem; color: rgba(255,255,255,0.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.9; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 2px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Features list ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-features-list { display: flex; flex-direction: column; gap: 0.75rem; margin: 2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item:hover { border-color: rgba(201,169,110,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item h4 { font-size: 0.9rem; color: var(--white); margin-bottom: 0.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Serviços grid ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.services-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); position: relative; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: ''; position: absolute; top: 0; left: 0; right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 2px; background: linear-gradient(90deg, var(--gold), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover::before { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-icon { font-size: 1.75rem; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-list { display: flex; flex-direction: column; gap: 0.3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-list span {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem; color: rgba(255,255,255,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-list span::before { content: '✓'; color: var(--gold); font-size: 0.7rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Resultados / estatísticas ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultados-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-card:hover { border-color: rgba(201,169,110,0.25); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-valor {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gold); line-height: 1; margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-label { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Diferencial Academia ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.academia-diffs {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(2,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.academia-diff {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 1.25rem; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.academia-diff:hover { border-color: rgba(201,169,110,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.academia-diff-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; min-width: 36px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.academia-diff h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.academia-diff p<span class="Apple-converted-space">  </span>{ font-size: 0.83rem; color: var(--gray); line-height: 1.7; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Processo de avaliação ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avaliacao-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avaliacao-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avaliacao-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avaliacao-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avaliacao-card h4 { font-size: 0.92rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.avaliacao-card p<span class="Apple-converted-space">  </span>{ font-size: 0.8rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Equipamentos ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equip-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equip-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equip-card:hover { border-color: rgba(201,169,110,0.25); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equip-card span { display: block; font-size: 2.5rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equip-card h4 { font-size: 0.9rem; color: var(--white); margin-bottom: 0.4rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equip-card p<span class="Apple-converted-space">  </span>{ font-size: 0.78rem; color: var(--gray); line-height: 1.6; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Depoimento destaque ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '"'; font-family: var(--font-serif); font-size: 6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.08); position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: -1rem; left: 1.5rem; line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque blockquote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic; font-size: 1.05rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(255,255,255,0.8);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.8; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative; z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque-author { display: flex; align-items: center; gap: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-av {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 44px; height: 44px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--gold-dark), var(--gold));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem; font-weight: 700; color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-name { font-size: 0.9rem; font-weight: 600; color: var(--white); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-meta { font-size: 0.75rem; color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Info box ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(201,169,110,0.07); border: 1px solid rgba(201,169,110,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); padding: 1.5rem 2rem; margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box h4 { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box p<span class="Apple-converted-space">  </span>{ font-size: 0.88rem; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.75; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== FAQ ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.5rem; cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem; font-weight: 600; color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question:hover { color: var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-arrow { font-size: 0.8rem; color: var(--gold); transition: var(--transition); flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-arrow { transform: rotate(180deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height: 0; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: max-height 0.4s ease, padding 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer p { font-size: 0.88rem; color: var(--gray); line-height: 1.75; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Outras especialidades ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outras-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.5rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card span { display: block; font-size: 2rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card h4 { font-size: 0.88rem; color: var(--white); margin-bottom: 0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card p<span class="Apple-converted-space">  </span>{ font-size: 0.75rem; color: var(--gray); line-height: 1.6; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Responsive ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.services-grid <span class="Apple-converted-space">  </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.resultados-grid { grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.avaliacao-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.equip-grid<span class="Apple-converted-space">      </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.outras-grid <span class="Apple-converted-space">    </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.esp-layout<span class="Apple-converted-space">      </span>{ grid-template-columns: 1fr; gap: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.services-grid <span class="Apple-converted-space">  </span>{ grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.resultados-grid { grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.academia-diffs<span class="Apple-converted-space">  </span>{ grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.avaliacao-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.equip-grid<span class="Apple-converted-space">      </span>{ grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.outras-grid <span class="Apple-converted-space">    </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.esp-badge-float { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NAVBAR ==================== --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades" class="active"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#agendar" class="btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto"<span class="Apple-converted-space">      </span>onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#equipe" <span class="Apple-converted-space">        </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html" <span class="Apple-converted-space">                </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#agendar" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PAGE HERO ==================== --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Academia</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="margin-bottom:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="badge badge-gold"&gt;💪 Especialidade 04&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title" style="max-width:660px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Academia com &lt;em&gt;acompanhamento real&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Espaço fitness de alto padrão com equipamentos premium, prescrição totalmente individualizada e integração clínica — para performance real, sem achismos.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#servicos" class="btn btn-secondary"&gt;Ver serviços&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== SOBRE ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-layout reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Fitness de alto padrão&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Academia não é só &lt;em&gt;equipamento&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Qualquer academia tem equipamentos. O que diferencia o Instituto Evolução é o que acontece antes, durante e depois do treino. Uma avaliação clínica real. Uma prescrição construída para o seu corpo, seus objetivos e suas limitações. Um profissional presente — não apenas supervisionando à distância.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Aqui, treinamento não é preenchimento de ficha. É ciência aplicada ao seu caso específico, com monitoramento contínuo e integração com a equipe médica e de fisioterapia quando necessário. O resultado é diferente porque o processo é diferente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Treinar com inteligência é melhor do que treinar com intensidade. Um não exclui o outro — mas a ordem importa."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="especialidade-pilates.html" class="btn btn-outline-gold"&gt;Ver Pilates →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>💪</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-visual-label"&gt;Academia · IE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-badge-float"&gt;Prescrição&lt;br&gt;individual&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NÚMEROS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Em números&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que os resultados &lt;em&gt;mostram&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="resultados-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;100%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;das prescrições são individualizadas — nenhuma ficha genérica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;+200&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;alunos que atingiram seus objetivos com acompanhamento profissional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;equipamentos sem manutenção — estrutura sempre em condições ideais&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;3x&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;mais rápido para atingir objetivos com acompanhamento integrado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== SERVIÇOS ==================== --&gt;</p>
+<p class="p1">&lt;section id="servicos" style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;O que oferecemos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Modalidades e &lt;em&gt;serviços&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Uma estrutura completa de fitness, com modalidades integradas e prescrição profissional para cada objetivo e perfil de aluno.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="services-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🏋️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Musculação&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Treinamento de força com prescrição baseada em evidência, periodização adequada e monitoramento de carga para resultados consistentes e seguros.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Periodização linear e ondulatória&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Controle de volume e intensidade&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Hipertrofia, força e resistência&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Adaptação para iniciantes e avançados&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;⚡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Treinamento Funcional&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Exercícios que simulam padrões de movimento do cotidiano e do esporte, desenvolvendo força funcional, equilíbrio e coordenação motora integrada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Padrões de movimento humano&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Core e estabilidade&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Agilidade e coordenação&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Progressão individualizada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;📊&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Avaliação Física Completa&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação detalhada de composição corporal, capacidade física, postura e histórico clínico — base para qualquer prescrição segura e eficaz.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Composição corporal (bioimpedância)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Testes de força e resistência&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Avaliação postural e mobilidade&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Definição de metas e linha de base&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🎯&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Personal Training&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Acompanhamento individual exclusivo durante os treinos, com atenção total à técnica, progressão de carga e adaptação em tempo real à sua resposta.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Atenção 100% individual durante treino&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Correção técnica em tempo real&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ajuste imediato de carga e volume&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Motivação e consistência garantidas&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🔄&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Reabilitação Ativa&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Exercícios prescritos em integração com a fisioterapia para pacientes em processo de recuperação — fase de transição entre a clínica e o treino pleno.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Integração com protocolo fisioterápico&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Exercícios adaptados à condição clínica&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Progressão segura e monitorada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Comunicação direta com fisioterapeuta&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;📈&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Acompanhamento de Performance&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Para atletas amadores e praticantes regulares que buscam otimização de performance com base em métricas objetivas e periodização esportiva.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Periodização esportiva avançada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Métricas de performance e evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Integração com modalidade praticada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Preparação para eventos e competições&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== AVALIAÇÃO INICIAL ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Sua jornada começa aqui&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O processo de &lt;em&gt;avaliação inicial&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Antes de qualquer treino, existe um protocolo de avaliação que garante que cada exercício prescrito seja seguro, adequado e eficaz para o seu perfil.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="avaliacao-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="avaliacao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="avaliacao-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Anamnese&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Histórico de saúde, lesões anteriores, objetivos, rotina, nível de condicionamento atual e expectativas reais.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="avaliacao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="avaliacao-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Composição corporal&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação de massa magra, gordura corporal, hidratação e distribuição segmentar por bioimpedância.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="avaliacao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="avaliacao-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Testes físicos&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação de força, flexibilidade, resistência cardiovascular e padrões de movimento para identificar limitações e potenciais.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="avaliacao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="avaliacao-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Prescrição individualizada&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Plano de treino exclusivo, com exercícios, cargas, volumes e progressão definidos especificamente para você.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box" style="margin-top:3rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4&gt;🔗 Integração clínica total&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Se você também é paciente médico ou de fisioterapia no Instituto, o educador físico tem acesso ao seu prontuário e comunica-se diretamente com os demais profissionais. Isso garante que seu treino nunca conflite com seu tratamento — e que cada área potencialize a outra.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== DIFERENCIAIS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Por que somos diferentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que separa a academia IE de &lt;em&gt;qualquer outra&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="academia-diffs reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="academia-diff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="academia-diff-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Prescrição, não ficha genérica&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Nenhum aluno recebe um programa padrão. Cada treino é construído individualmente com base na avaliação, nos objetivos e na resposta ao treinamento ao longo do tempo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="academia-diff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="academia-diff-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Ambiente exclusivo e sem superlotação&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Número controlado de alunos por turno. Você nunca disputará equipamento ou esperará por uma máquina. Cada sessão é produtiva do início ao fim.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="academia-diff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="academia-diff-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Integração real com saúde clínica&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;O educador físico conversa com o médico e o fisioterapeuta. Seu treino respeita sua condição clínica e complementa seu tratamento — não compete com ele.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="academia-diff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="academia-diff-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Monitoramento e reavaliação periódica&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Reavaliações periódicas de composição corporal e capacidade física para acompanhar sua evolução com dados reais e ajustar o programa conforme necessário.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="academia-diff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="academia-diff-num"&gt;05&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Equipamentos premium em manutenção constante&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Estrutura de alto padrão com equipamentos de marcas reconhecidas, em perfeito estado de funcionamento e higienizados rigorosamente após cada uso.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="academia-diff"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="academia-diff-num"&gt;06&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Profissional presente durante o treino&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;O educador físico acompanha ativamente suas sessões — não apenas observa. Correção técnica, ajuste de carga e motivação são parte do serviço, não extras.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== EQUIPAMENTOS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Estrutura e equipamentos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Tecnologia a serviço da &lt;em&gt;sua evolução&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="equip-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="equip-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🏋️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Estações de musculação&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Equipamentos de marcas premium para treinamento de todos os grupos musculares com máxima segurança e amplitude de movimento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="equip-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🔄&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Área funcional&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Espaço dedicado ao treinamento funcional com kettlebells, TRX, elásticos, medicine balls e implementos variados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="equip-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;❤️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Cardio de alto desempenho&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Esteiras, bikes e elípticos com monitoramento de frequência cardíaca e conectividade para acompanhamento preciso do treino aeróbico.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="equip-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;📊&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Bioimpedância profissional&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Balança de bioimpedância segmentar para avaliação de composição corporal com precisão clínica em cada reavaliação.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="equip-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🎯&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Área de alongamento e mobilidade&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Espaço dedicado à mobilidade, aquecimento e trabalho de flexibilidade — parte essencial de qualquer protocolo de treino completo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="equip-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;❄️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Climatização individual&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Temperatura controlada individualmente em cada ambiente da academia, garantindo conforto ideal durante toda a sessão.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== DEPOIMENTOS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Experiência real&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que nossos alunos &lt;em&gt;dizem&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="depo-destaque reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"O ambiente já diz tudo. Parece outro mundo comparado ao que eu estava acostumado. Treinei em academias populares por anos sem resultado consistente. Aqui, em 4 meses com acompanhamento real, transformei minha composição corporal e minha relação com o treino. Os resultados vieram rápido e com acompanhamento de verdade."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-av"&gt;MF&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-name"&gt;Marcelo F.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-meta"&gt;Academia · 1 ano de acompanhamento&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-left:auto;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="color:var(--gold);letter-spacing:2px;font-size:0.9rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque reveal" style="padding:1.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote style="font-size:0.92rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Sempre tive medo de academia por não saber o que estava fazendo. Aqui, aprendi de verdade. O educador físico explica cada exercício, corrige a técnica e ajusta o treino conforme minha evolução. Nunca me senti mais segura treinando."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-av"&gt;JP&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-name"&gt;Juliana P.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-meta"&gt;Academia + Pilates · 8 meses&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.85rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque reveal" style="padding:1.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote style="font-size:0.92rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Vim da fisioterapia direto para a academia do Instituto. A integração entre os profissionais foi impressionante — o educador físico já sabia exatamente onde eu estava na recuperação e adaptou tudo. É outra experiência."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-av"&gt;TA&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-name"&gt;Thiago A.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-meta"&gt;Fisioterapia → Academia · 6 meses&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.85rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FAQ ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Dúvidas frequentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Perguntas &lt;em&gt;comuns&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="faq-list"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Como funciona o modelo de acesso à academia?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;O acesso à academia do Instituto Evolução é exclusivo e com horário agendado. Não existe acesso livre irrestrito — cada sessão é marcada previamente, garantindo que você sempre tenha atenção do profissional e não dispute equipamentos com outros alunos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso treinar sem acompanhamento de personal?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;O modelo padrão do Instituto inclui presença do educador físico durante as sessões. Esse acompanhamento é parte do que diferencia nossa academia. Para alunos experientes com objetivos específicos, existe a possibilidade de modalidades semi-supervisionadas — fale conosco para entender a melhor opção para o seu perfil.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso começar mesmo sem nunca ter treinado antes?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Absolutamente. Iniciantes são bem-vindos e, na verdade, se beneficiam muito mais do nosso modelo de acompanhamento. A avaliação inicial identifica seu ponto de partida e o programa começa exatamente onde você está — não onde achamos que você deveria estar.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Como é feita a integração com a fisioterapia?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Quando um paciente da fisioterapia recebe alta parcial ou indicação para atividade física supervisionada, o fisioterapeuta se comunica diretamente com o educador físico, compartilhando as diretrizes do caso. O programa de treino respeita as restrições, complementa o tratamento e tem progressão alinhada com a evolução clínica.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Com que frequência devo treinar?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;A frequência ideal varia conforme seus objetivos, disponibilidade e nível de condicionamento. Na avaliação inicial, o educador físico recomendará a frequência mais adequada para o seu caso — geralmente entre 3 e 5 sessões semanais, com periodização que respeita a recuperação muscular e previne o overtraining.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso combinar academia com Pilates no Instituto?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim, e essa é uma das combinações mais eficazes que oferecemos. O Pilates complementa o treino de força com trabalho de controle motor, mobilidade e estabilização profunda. Os profissionais alinham os protocolos para que as duas práticas se potencializem mutuamente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== OUTRAS ESPECIALIDADES ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Explore também&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Outras &lt;em&gt;especialidades&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="outras-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-medica.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🩺&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Consultas Médicas&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Atendimento clínico completo e sem pressa.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-laboratorio.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🔬&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Laboratório&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Exames completos integrados ao prontuário.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-fisioterapia.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🦴&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Fisioterapia&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reabilitação funcional individualizada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-pilates.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🤸&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Pilates&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Método com turmas reduzidas e indicação clínica.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CTA ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="justify-content:center;"&gt;Próximo passo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Pronto para treinar com &lt;em&gt;inteligência?&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:480px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Agende sua avaliação física inicial. Respondemos em até 2 horas no horário comercial.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FOOTER ==================== --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" aria-label="Instagram"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" aria-label="WhatsApp"&gt;WA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" aria-label="Localização"&gt;📍&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;O Instituto&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#instituto"&gt;Nossa história&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#metodologia"&gt;Metodologia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#ambiente"&gt;Estrutura&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Especialidades&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-medica.html"&gt;Consultas Médicas&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-laboratorio.html"&gt;Laboratório&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-fisioterapia.html"&gt;Fisioterapia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-academia.html"&gt;Academia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-pilates.html"&gt;Pilates&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Contato&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="blog.html"&gt;Blog / Insights&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank"&gt;Como chegar&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Instituto Evolução — Todos os direitos reservados · Limeira, SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WhatsApp Float --&gt;</p>
+<p class="p1">&lt;a href="https://wa.me/5519900000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg viewBox="0 0 24 24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/svg&gt;</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Navbar scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navbar.classList.toggle('scrolled', window.scrollY &gt; 40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hamburger</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hamburger = document.getElementById('hamburger');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navMobile = document.getElementById('navMobile');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hamburger.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMobile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// FAQ accordion</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function toggleFaq(el) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const item = el.parentElement;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isOpen = item.classList.contains('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.faq-item').forEach(i =&gt; i.classList.remove('open'));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!isOpen) item.classList.add('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Scroll reveal</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reveals = document.querySelectorAll('.reveal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries.forEach(e =&gt; { if (e.isIntersecting) e.target.classList.add('visible'); });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, { threshold: 0.1 });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>reveals.forEach(r =&gt; observer.observe(r));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Blog Instituto Evolução — Insights sobre saúde, fisioterapia, pilates e medicina preventiva."/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Blog &amp; Insights | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-hero-title { font-size: clamp(2.2rem,4vw,3.5rem); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Filter Tabs */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-filters {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 3rem 0 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.filter-btn {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 8px 20px; border-radius: 50px; font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600; letter-spacing: 0.06em; cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.25); background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gray); transition: var(--transition); font-family: var(--font-sans);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.filter-btn:hover,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.filter-btn.active {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--gold); color: var(--dark); border-color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Featured Post */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured:hover { border-color: rgba(201,169,110,0.35); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured-img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--dark-4), var(--dark-3));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 5rem; min-height: 320px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-right: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured-body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2.5rem; display: flex; flex-direction: column; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.featured-badge {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex; align-items: center; gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.25);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 5px 12px; border-radius: 50px; margin-bottom: 1rem; width: fit-content;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured-body h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.6rem; color: var(--white); line-height: 1.3; margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured-body p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem; color: var(--gray); line-height: 1.75; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured-meta {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem; color: var(--gray); margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.blog-featured-meta span { display: flex; align-items: center; gap: 5px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Grid */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.posts-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-5px); box-shadow: var(--shadow-gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>aspect-ratio: 16/9; background: linear-gradient(135deg, var(--dark-4), var(--dark-3));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem; border-bottom: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-cat {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-body h3 { font-size: 1rem; color: var(--white); line-height: 1.4; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-body p<span class="Apple-converted-space">  </span>{ font-size: 0.83rem; color: var(--gray); line-height: 1.7; flex: 1; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-footer<span class="Apple-converted-space">  </span>{ display: flex; align-items: center; justify-content: space-between; margin-top: auto; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-meta<span class="Apple-converted-space">    </span>{ font-size: 0.75rem; color: var(--gray); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-read<span class="Apple-converted-space">    </span>{ font-size: 0.78rem; color: var(--gold); font-weight: 600; transition: var(--transition); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.post-read:hover { color: var(--gold-light); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Newsletter */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.18);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 3rem; text-align: center; margin-top: 5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-box h3 { font-size: 1.6rem; color: var(--white); margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-box p<span class="Apple-converted-space">  </span>{ color: var(--gray); font-size: 0.9rem; margin-bottom: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-form {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 1rem; max-width: 480px; margin: 0 auto; flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-form input {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1; background: rgba(255,255,255,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(255,255,255,0.1); border-radius: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 22px; color: var(--white); font-family: var(--font-sans);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem; outline: none; transition: var(--transition); min-width: 200px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-form input:focus { border-color: var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.newsletter-form input::placeholder { color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.blog-featured { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.blog-featured-img { min-height: 200px; border-right: none; border-bottom: 1px solid rgba(201,169,110,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.posts-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.newsletter-form { flex-direction: column; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.posts-grid { grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- NAVBAR --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html" class="active"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#agendar" class="btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto" onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#equipe"<span class="Apple-converted-space">    </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html"<span class="Apple-converted-space">            </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#agendar" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PAGE HERO --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt; Blog &amp; Insights</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Conhecimento &amp; Saúde&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title blog-hero-title"&gt;Insights para &lt;em&gt;sua evolução&lt;/em&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Artigos, orientações e perspectivas da nossa equipe multidisciplinar para ajudar você a tomar melhores decisões sobre saúde.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- CONTENT --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:4rem 0 6rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Filters --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="blog-filters"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn active"&gt;Todos&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn"&gt;Saúde Integral&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn"&gt;Fisioterapia&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn"&gt;Pilates&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn"&gt;Performance&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn"&gt;Medicina Preventiva&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="filter-btn"&gt;Bem-estar&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Featured --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="artigo-medicina-preventiva.html" class="blog-featured reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="blog-featured-img"&gt;🩺&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="blog-featured-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="featured-badge"&gt;⭐ Destaque&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;"&gt;Saúde Integral&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Por que cuidar do corpo precisa ser uma decisão, não uma reação&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;A medicina preventiva ainda é subutilizada no Brasil. Entenda como pequenas mudanças de perspectiva podem transformar sua relação com a saúde de forma duradoura e sustentável.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="blog-featured-meta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;👤 Equipe IE&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;📅 Janeiro 2025&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;⏱ 8 min de leitura&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="btn btn-outline-gold"&gt;Ler artigo completo →&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Posts Grid --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="posts-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="artigo-dor-lombar.html" class="post-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-img"&gt;🦴&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-cat"&gt;Fisioterapia&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Dor lombar: quando é hora de parar de ignorar&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sinais que indicam que sua coluna precisa de atenção antes que o problema se agrave e comprometa sua qualidade de vida.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-meta"&gt;Fisioterapia IE · 5 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-read"&gt;Ler →&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="artigo-pilates-atletico.html" class="post-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-img"&gt;🤸&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-cat"&gt;Performance&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;O papel do Pilates na recuperação atlética&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Como o método vai muito além do alongamento e se torna ferramenta essencial para atletas e praticantes de exercício regular.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-meta"&gt;Pilates IE · 6 min&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-read"&gt;Ler →&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="post-card reveal" style="opacity:0.55;pointer-events:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-img"&gt;💪&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-cat"&gt;Bem-estar&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Treinamento funcional após os 40: o que muda e o que melhora&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Como adaptar o treinamento físico para extrair o máximo de benefícios em cada fase da vida.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-meta"&gt;Em breve&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-read" style="color:var(--gray);"&gt;Aguarde&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="post-card reveal" style="opacity:0.55;pointer-events:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-img"&gt;🔬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-cat"&gt;Medicina Preventiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Quais exames fazer anualmente — e por quê a maioria não faz&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Guia completo com os exames essenciais por faixa etária para monitorar sua saúde de forma proativa.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-meta"&gt;Em breve&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-read" style="color:var(--gray);"&gt;Aguarde&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="post-card reveal" style="opacity:0.55;pointer-events:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-img"&gt;🧘&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-cat"&gt;Pilates&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Pilates durante a gestação: benefícios e cuidados essenciais&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Como o método Pilates pode ser aliado seguro e poderoso ao longo dos nove meses de gestação.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-meta"&gt;Em breve&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-read" style="color:var(--gray);"&gt;Aguarde&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="post-card reveal" style="opacity:0.55;pointer-events:none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-img"&gt;🏃&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="post-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-cat"&gt;Performance&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Recuperação pós-treino: o que a ciência realmente diz&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Estratégias baseadas em evidência para otimizar a recuperação e maximizar seus resultados esportivos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="post-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-meta"&gt;Em breve&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="post-read" style="color:var(--gray);"&gt;Aguarde&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;&lt;!-- /posts-grid --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Newsletter --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="newsletter-box reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-label" style="justify-content:center;"&gt;Newsletter&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;Receba novos artigos &lt;em style="color:var(--gold);font-style:italic;"&gt;direto no seu e-mail&lt;/em&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Conteúdo de qualidade sobre saúde, bem-estar e performance. Sem spam, apenas valor.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;form class="newsletter-form" onsubmit="subscribeNewsletter(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="email" placeholder="seu@email.com" required/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit" class="btn btn-primary"&gt;Inscrever →&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FOOTER --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" aria-label="Instagram"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" aria-label="WhatsApp"&gt;WA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" aria-label="Localização"&gt;📍&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;O Instituto&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#instituto"&gt;Nossa história&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#metodologia"&gt;Metodologia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#ambiente"&gt;Estrutura&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Especialidades&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-medica.html"&gt;Consultas Médicas&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-laboratorio.html"&gt;Laboratório&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-fisioterapia.html"&gt;Fisioterapia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-academia.html"&gt;Academia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-pilates.html"&gt;Pilates&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Contato&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="blog.html"&gt;Blog / Insights&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank"&gt;Como chegar&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Instituto Evolução — Todos os direitos reservados · Limeira, SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WhatsApp Float --&gt;</p>
+<p class="p1">&lt;a href="https://wa.me/5519900000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg viewBox="0 0 24 24"&gt;&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;&lt;/svg&gt;</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Navbar scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navbar.classList.toggle('scrolled', window.scrollY &gt; 40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hamburger</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hamburger = document.getElementById('hamburger');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navMobile = document.getElementById('navMobile');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hamburger.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMobile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Filter tabs</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.filter-btn').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.filter-btn').forEach(b =&gt; b.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>btn.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Newsletter</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function subscribeNewsletter(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn = e.target.querySelector('button');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent = '✓ Inscrito!';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.style.background = '#22c55e';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Reveal on scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reveals = document.querySelectorAll('.reveal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver((entries) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries.forEach(e =&gt; { if (e.isIntersecting) { e.target.classList.add('visible'); } });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, { threshold: 0.12 });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>reveals.forEach(r =&gt; observer.observe(r));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

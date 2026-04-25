@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Consultas Médicas de alto padrão — Instituto Evolução, Limeira SP"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Consultas Médicas | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-layout <span class="Apple-converted-space">  </span>{ display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual <span class="Apple-converted-space">  </span>{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:linear-gradient(135deg,var(--dark-3),var(--dark-4));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(201,169,110,0.15); border-radius:var(--radius-lg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>aspect-ratio:4/5; display:flex; flex-direction:column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center; justify-content:center; gap:1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:5rem; position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.75rem; font-weight:700; letter-spacing:0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform:uppercase; color:var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-badge-float {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:absolute; bottom:-1rem; right:-1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--gold); color:var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:0.75rem 1.25rem; border-radius:var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.82rem; font-weight:700; text-align:center; line-height:1.3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-text p { font-size:0.97rem; color:rgba(255,255,255,0.72); line-height:1.9; margin-bottom:1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-features-list { display:flex; flex-direction:column; gap:0.75rem; margin:2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:flex-start; gap:1rem; padding:1rem 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--dark-3); border:1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius); transition:var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item:hover { border-color:rgba(201,169,110,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-icon { font-size:1.25rem; flex-shrink:0; margin-top:0.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item h4 { font-size:0.9rem; color:var(--white); margin-bottom:0.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item p<span class="Apple-converted-space">  </span>{ font-size:0.82rem; color:var(--gray); line-height:1.65; margin:0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family:var(--font-serif); font-style:italic; font-size:1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--gold); border-left:2px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left:1.5rem; margin:2rem 0; line-height:1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--dark-3); border:1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius-lg); padding:1.75rem; transition:var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover { border-color:rgba(201,169,110,0.3); transform:translateY(-4px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card h3 { font-size:1rem; color:var(--white); margin-bottom:0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card p<span class="Apple-converted-space">  </span>{ font-size:0.83rem; color:var(--gray); line-height:1.7; margin-bottom:1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-includes { display:flex; flex-direction:column; gap:0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-includes span {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.78rem; color:rgba(255,255,255,0.55);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:center; gap:7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-includes span::before { content:'✓'; color:var(--gold); font-size:0.7rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-list { display:flex; flex-direction:column; gap:1rem; margin-top:3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--dark-3); border:1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius); overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:1.25rem 1.5rem; cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex; align-items:center; justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:0.92rem; font-weight:600; color:var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:var(--transition); user-select:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question:hover { color:var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-arrow { font-size:0.8rem; color:var(--gold); transition:var(--transition); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-arrow { transform:rotate(180deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:0 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-answer { max-height:300px; padding:0 1.5rem 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer p { font-size:0.88rem; color:var(--gray); line-height:1.75; margin:0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outras-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background:var(--dark-3); border:1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:var(--radius-lg); padding:1.5rem; text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition:var(--transition); display:block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card:hover { border-color:rgba(201,169,110,0.3); transform:translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card span { display:block; font-size:2rem; margin-bottom:0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card h4 { font-size:0.88rem; color:var(--white); margin-bottom:0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card p<span class="Apple-converted-space">  </span>{ font-size:0.75rem; color:var(--gray); line-height:1.6; margin:0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){ .services-grid{grid-template-columns:repeat(2,1fr);} .outras-grid{grid-template-columns:repeat(2,1fr);} }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){ .esp-layout{grid-template-columns:1fr;gap:3rem;} .services-grid{grid-template-columns:1fr;} .outras-grid{grid-template-columns:1fr 1fr;} }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- NAVBAR --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades" class="active"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#agendar" class="btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto"<span class="Apple-converted-space">      </span>onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#equipe" <span class="Apple-converted-space">        </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html" <span class="Apple-converted-space">                </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#agendar" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- PAGE HERO --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Consultas Médicas</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="margin-bottom:1rem;"&gt;&lt;span class="badge badge-gold"&gt;🩺 Especialidade 01&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title" style="max-width:640px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Consultas Médicas de &lt;em&gt;alto padrão&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:540px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Atendimento clínico completo, sem pressa, com tempo real para ouvir, examinar e diagnosticar com a precisão que você merece.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar consulta →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#servicos" class="btn btn-secondary"&gt;Ver serviços&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- SOBRE A ESPECIALIDADE --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-layout reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Medicina particular&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Por que a medicina particular &lt;em&gt;faz diferença&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;No modelo convencional de saúde brasileiro, consultas de 10 a 15 minutos são a norma. Não por escolha médica — mas por imposição de um sistema que prioriza volume sobre qualidade. O resultado é previsível: diagnósticos imprecisos, prescrições genéricas e pacientes que saem da consulta sem realmente ter sido ouvidos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;No Instituto Evolução, cada consulta tem a duração que precisa ter. Não existe cronômetro na sala do médico. O que existe é tempo, atenção e o compromisso genuíno de entender você como um indivíduo único — com história, contexto e objetivos próprios.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-quote"&gt;"Uma boa consulta médica começa com silêncio. O tempo de ouvir antes de qualquer conclusão."&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar consulta&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="especialidade-laboratorio.html" class="btn btn-outline-gold"&gt;Ver laboratório →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>🩺</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-visual-label"&gt;Medicina · IE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-badge-float"&gt;Sem&lt;br&gt;espera&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- COMO FUNCIONA --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Como funciona&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que esperar da &lt;em&gt;sua consulta&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-features-list reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;📋&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Anamnese completa e sem pressa&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Ouvimos sua história clínica de forma detalhada — sintomas, histórico familiar, hábitos de vida, estresse e tudo que influencia sua saúde. Tempo médio: 40 a 60 minutos na primeira consulta.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🔬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Exame físico minucioso&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Avaliação clínica completa, feita com atenção a cada detalhe. Nada é deixado de lado por falta de tempo ou pressa.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;📊&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Interpretação integrada de exames&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Seus exames são interpretados em série temporal, não isoladamente. Pequenas tendências são identificadas antes de se tornarem problemas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🤝&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Plano de cuidado compartilhado&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Você participa ativamente das decisões sobre seu tratamento. Explicamos tudo com clareza — sem jargões, sem pressa, sem condescendência.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🔗&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Integração com toda a equipe&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Quando necessário, o médico se comunica diretamente com o fisioterapeuta e o educador físico para construir um plano verdadeiramente integrado.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- SERVIÇOS --&gt;</p>
+<p class="p1">&lt;section id="servicos" style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Nossos serviços&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que &lt;em&gt;oferecemos&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="services-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:2rem;margin-bottom:1rem;"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Consulta de clínica geral&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Atendimento amplo para diagnóstico, prevenção e acompanhamento de saúde geral. Ponto de entrada e coordenação do seu cuidado.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Anamnese completa&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Exame físico detalhado&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Pedido de exames personalizado&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Orientações e prescrições&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:2rem;margin-bottom:1rem;"&gt;🛡️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Check-up preventivo&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação completa de saúde para identificar riscos e oportunidades de prevenção antes que problemas se manifestem.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Perfil laboratorial completo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Avaliação cardiovascular&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Rastreamento oncológico&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Plano de prevenção personalizado&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:2rem;margin-bottom:1rem;"&gt;📈&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Medicina preventiva&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Acompanhamento longitudinal com foco em longevidade saudável, otimização de biomarcadores e qualidade de vida duradoura.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Monitoramento de biomarcadores&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Gestão de risco metabólico&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Orientação nutricional e de estilo de vida&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Acompanhamento de série histórica&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:2rem;margin-bottom:1rem;"&gt;🔄&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Retorno e acompanhamento&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Consultas de acompanhamento para avaliação de resposta ao tratamento, ajuste de planos e monitoramento contínuo da evolução.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Revisão de exames e resultados&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Ajuste de medicamentos&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Atualização do plano de saúde&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:2rem;margin-bottom:1rem;"&gt;💉&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Vacinação e imunização&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação e atualização do calendário vacinal para todas as idades, com orientação personalizada conforme perfil de risco.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Avaliação do calendário vacinal&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Vacinas para viagem&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Imunização adulto e idoso&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:2rem;margin-bottom:1rem;"&gt;😴&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Saúde do sono e bem-estar&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação e manejo de distúrbios do sono, estresse e aspectos de saúde mental que impactam diretamente a saúde física.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-includes"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Avaliação de qualidade do sono&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Manejo de estresse&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Saúde mental integrada&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FAQ --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Dúvidas frequentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Perguntas &lt;em&gt;comuns&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="faq-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Quanto tempo dura uma consulta? &lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;&lt;p&gt;A primeira consulta dura em média 60 a 90 minutos. Retornos variam conforme a necessidade, mas nunca são cronometrados. A consulta termina quando o médico e o paciente considerarem que tudo foi abordado adequadamente.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Atendem por convênio? &lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;&lt;p&gt;Não. O Instituto Evolução atende exclusivamente pelo modelo particular. Essa escolha é intencional: sem convênio, não há limitação de tempo, de procedimentos ou de dedicação por consulta. O foco é inteiramente no paciente.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso solicitar reembolso do meu plano de saúde? &lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;&lt;p&gt;Depende do seu plano de saúde. Alguns planos permitem reembolso parcial por consultas particulares. Emitimos recibo detalhado para que você possa solicitar o reembolso diretamente à sua operadora.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Os exames pedidos na consulta são realizados no Instituto? &lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;&lt;p&gt;Parte dos exames pode ser realizada diretamente em nosso laboratório interno. Para exames de maior complexidade, indicamos laboratórios parceiros de confiança. O médico interpreta os resultados de qualquer fonte na consulta de retorno.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Como é feita a integração com fisioterapia e Pilates? &lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;&lt;p&gt;Quando o médico identifica necessidade de outros profissionais, ele entra em contato diretamente com o fisioterapeuta ou educador físico do Instituto para alinhar o plano de tratamento. Você não precisa coordenar nada — a equipe faz isso internamente.&lt;/p&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- OUTRAS ESPECIALIDADES --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Explore também&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Outras &lt;em&gt;especialidades&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="outras-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-laboratorio.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🔬&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Laboratório&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Exames completos com resultados ágeis e integração ao prontuário.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-fisioterapia.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🦴&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Fisioterapia&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reabilitação funcional com abordagem individualizada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-academia.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;💪&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Academia&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Fitness de alto padrão com prescrição profissional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-pilates.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🤸&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Pilates&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Método com turmas reduzidas e indicação clínica integrada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- CTA --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="justify-content:center;"&gt;Próximo passo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Pronto para uma consulta &lt;em&gt;de verdade?&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:480px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.75;"&gt;Agende sua consulta agora. Respondemos em até 2 horas no horário comercial.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar consulta →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"&gt;&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- FOOTER --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WA&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+</body>
+</html>

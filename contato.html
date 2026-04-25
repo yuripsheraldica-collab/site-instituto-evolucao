@@ -1,0 +1,842 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Entre em contato com o Instituto Evolução — Agende sua avaliação, fale pelo WhatsApp ou nos visite em Limeira, SP."/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Contato &amp; Localização | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Layout principal ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 5rem; align-items: start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Info de contato ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-info h2 { margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-info &gt; p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem; color: rgba(255,255,255,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.85; margin-bottom: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-cards { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none; color: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-card:hover { border-color: rgba(201,169,110,0.35); transform: translateX(4px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-card-icon {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 44px; height: 44px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem; flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-card-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-card-value {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem; font-weight: 600; color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.15rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contato-card-sub { font-size: 0.78rem; color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Horários ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horarios-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horarios-box h4 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horario-row {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.88rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horario-row:last-child { border-bottom: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horario-dia { color: rgba(255,255,255,0.65); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horario-time { color: var(--white); font-weight: 600; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horario-time.fechado { color: var(--gray); font-weight: 400; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.horario-badge {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex; align-items: center; gap: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.68rem; font-weight: 700; padding: 3px 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50px; background: rgba(34,197,94,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #22c55e; border: 1px solid rgba(34,197,94,0.25);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Aviso importante ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.aviso-particular {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(201,169,110,0.07); border: 1px solid rgba(201,169,110,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); padding: 1.25rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.aviso-particular span { font-size: 1.1rem; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.aviso-particular p { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.aviso-particular strong { color: var(--gold); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Formulário ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2.5rem; position: sticky; top: 90px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-box h3 { font-size: 1.2rem; color: var(--white); margin-bottom: 0.4rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-box &gt; p { font-size: 0.85rem; color: var(--gray); margin-bottom: 2rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-submit {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem; padding: 16px; font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-privacy { text-align: center; font-size: 0.75rem; color: var(--gray); margin-top: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-wpp { text-align: center; margin-top: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-wpp a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex; align-items: center; gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem; color: #25D366; font-weight: 600; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-wpp a:hover { opacity: 0.8; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-success { display: none; text-align: center; padding: 2.5rem 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-success.show { display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.success-icon { font-size: 3rem; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-success h3 { color: var(--white); margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-success p<span class="Apple-converted-space">  </span>{ color: var(--gray); font-size: 0.9rem; line-height: 1.7; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Mapa ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-section { background: var(--dark-2); padding: 5rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1.5fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 4rem; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-info h2 { margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-info p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem; color: rgba(255,255,255,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.85; margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-address {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-address h4 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-address p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem; color: var(--white); line-height: 1.75;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-address span { color: var(--gray); font-size: 0.82rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-como-chegar { display: flex; flex-direction: column; gap: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chegar-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem; color: rgba(255,255,255,0.65);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.chegar-item span { font-size: 1rem; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-embed {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.15); aspect-ratio: 4/3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column; gap: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-embed-placeholder {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; color: var(--gray);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-embed-placeholder span { font-size: 3rem; display: block; margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-embed-placeholder p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); max-width: 200px; margin: 0 auto 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.mapa-real {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%; height: 100%; min-height: 360px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none; border-radius: var(--radius-lg);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== FAQ de contato ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-contato { background: var(--dark); padding: 5rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.5rem; cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem; font-weight: 600; color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question:hover { color: var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-arrow { font-size: 0.8rem; color: var(--gold); transition: var(--transition); flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-arrow { transform: rotate(180deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height: 0; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: max-height 0.4s ease, padding 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer p { font-size: 0.85rem; color: var(--gray); line-height: 1.75; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Canais de atendimento ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canais-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-icon { font-size: 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-card h4 { font-size: 0.95rem; color: var(--white); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-card p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-card .btn { margin-top: 0.5rem; width: 100%; justify-content: center; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-wpp<span class="Apple-converted-space">  </span>{ border-color: rgba(37,211,102,0.2); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-wpp:hover<span class="Apple-converted-space">  </span>{ border-color: rgba(37,211,102,0.45); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-insta{ border-color: rgba(201,169,110,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.canal-form { border-color: rgba(201,169,110,0.1); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== CTA final ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-final {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-2); padding: 5rem 0; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Responsive ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.contato-layout { grid-template-columns: 1fr; gap: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.form-box { position: static; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.mapa-layout { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.canais-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.faq-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.form-row { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.canais-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NAVBAR ==================== --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="equipe.html"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="contato.html" class="active btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto"<span class="Apple-converted-space">      </span>onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="equipe.html" <span class="Apple-converted-space">              </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html" <span class="Apple-converted-space">                </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="contato.html" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PAGE HERO ==================== --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt; Contato &amp; Agendamento</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Fale conosco&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title" style="max-width:640px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Pronto para começar sua &lt;em&gt;evolução?&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Entre em contato pelo canal que preferir. Nossa equipe responde em até 2 horas no horário comercial — sem burocracia, sem espera.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Indicadores rápidos --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;align-items:center;gap:0.6rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulseDot 2s infinite;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span style="font-size:0.82rem;color:var(--gray-light);"&gt;Respondemos em até 2h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;align-items:center;gap:0.6rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span style="color:var(--gold);"&gt;📍&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span style="font-size:0.82rem;color:var(--gray-light);"&gt;R. João Kuhl Filho, 101 — Limeira, SP&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;align-items:center;gap:0.6rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span style="color:var(--gold);"&gt;📅&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span style="font-size:0.82rem;color:var(--gray-light);"&gt;Segunda a sábado · horários flexíveis&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@keyframes pulseDot {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>0%,100% { opacity:1; transform:scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>50%<span class="Apple-converted-space">      </span>{ opacity:0.5; transform:scale(1.4); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CONTATO + FORMULÁRIO ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="contato-layout"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Coluna esquerda — informações --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contato-info reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Informações de contato&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Como nos &lt;em&gt;encontrar&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Escolha o canal mais conveniente para você. Todas as mensagens são respondidas pela própria equipe do Instituto — sem atendentes terceirizados, sem chatbot.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Cards de contato --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="contato-cards"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="contato-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contato-card-icon"&gt;💬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-label"&gt;WhatsApp&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-value"&gt;(19) 9xxxx-xxxx&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-sub"&gt;Canal mais rápido — resposta em até 2h&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.8rem;"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" class="contato-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contato-card-icon"&gt;📸&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-label"&gt;Instagram&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-value"&gt;@instituto.evolucao&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-sub"&gt;Conteúdo, bastidores e mensagens diretas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.8rem;"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" class="contato-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="contato-card-icon"&gt;📍&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-label"&gt;Endereço&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-value"&gt;R. João Kuhl Filho, 101&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="contato-card-sub"&gt;Limeira, SP · Ver no mapa →&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.8rem;"&gt;→&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Horários --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="horarios-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Horários de atendimento&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Segunda-feira&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="display:flex;align-items:center;gap:0.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="horario-time"&gt;08h — 20h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="horario-badge"&gt;● Aberto&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Terça-feira&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-time"&gt;08h — 20h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Quarta-feira&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-time"&gt;08h — 20h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Quinta-feira&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-time"&gt;08h — 20h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Sexta-feira&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-time"&gt;08h — 18h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Sábado&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-time"&gt;08h — 13h&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="horario-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-dia"&gt;Domingo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="horario-time fechado"&gt;Fechado&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Aviso particular --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="aviso-particular"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;💳&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;&lt;strong&gt;Atendimento exclusivamente particular.&lt;/strong&gt; Não trabalhamos com convênios ou planos de saúde. Emitimos recibo para possível reembolso junto à sua operadora. Essa escolha garante tempo, dedicação e qualidade sem limitações.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Especialidades disponíveis --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;"&gt;Especialidades disponíveis&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="display:flex;flex-wrap:wrap;gap:0.6rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="especialidade-medica.html"<span class="Apple-converted-space">      </span>style="padding:6px 14px;border:1px solid rgba(201,169,110,0.2);border-radius:50px;font-size:0.78rem;color:var(--gray-light);transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(201,169,110,0.2)';this.style.color='var(--gray-light)';"&gt;🩺 Consulta Médica&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="especialidade-laboratorio.html" style="padding:6px 14px;border:1px solid rgba(201,169,110,0.2);border-radius:50px;font-size:0.78rem;color:var(--gray-light);transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(201,169,110,0.2)';this.style.color='var(--gray-light)';"&gt;🔬 Laboratório&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="especialidade-fisioterapia.html" style="padding:6px 14px;border:1px solid rgba(201,169,110,0.2);border-radius:50px;font-size:0.78rem;color:var(--gray-light);transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(201,169,110,0.2)';this.style.color='var(--gray-light)';"&gt;🦴 Fisioterapia&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="especialidade-academia.html"<span class="Apple-converted-space">    </span>style="padding:6px 14px;border:1px solid rgba(201,169,110,0.2);border-radius:50px;font-size:0.78rem;color:var(--gray-light);transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(201,169,110,0.2)';this.style.color='var(--gray-light)';"&gt;💪 Academia&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="especialidade-pilates.html" <span class="Apple-converted-space">    </span>style="padding:6px 14px;border:1px solid rgba(201,169,110,0.2);border-radius:50px;font-size:0.78rem;color:var(--gray-light);transition:var(--transition);" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)';" onmouseout="this.style.borderColor='rgba(201,169,110,0.2)';this.style.color='var(--gray-light)';"&gt;🤸 Pilates&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;&lt;!-- /contato-info --&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Coluna direita — formulário --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="form-box"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Formulário visível --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="formContainer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Solicitar agendamento&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Sem compromisso. Nossa equipe entra em contato para confirmar data e horário.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="contatoForm" onsubmit="submitForm(event)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="form-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;label for="nome"&gt;Nome completo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="text" id="nome" placeholder="Seu nome completo" required/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;label for="whatsapp"&gt;WhatsApp&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="tel" id="whatsapp" placeholder="(19) 9xxxx-xxxx" required/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="email"&gt;E-mail&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="email" id="email" placeholder="seu@email.com" required/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="especialidade"&gt;Especialidade de interesse&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="especialidade" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="" disabled selected&gt;Selecione a especialidade...&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="medica"&gt;🩺 Consulta Médica&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="laboratorio"&gt;🔬 Laboratório&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="fisioterapia"&gt;🦴 Fisioterapia&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="academia"&gt;💪 Academia&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="pilates"&gt;🤸 Pilates&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="geral"&gt;⭐ Avaliação Geral&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="horario"&gt;Preferência de horário&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;select id="horario"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="" disabled selected&gt;Selecione uma preferência...&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="manha"&gt;Manhã (08h — 12h)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="tarde"&gt;Tarde (12h — 18h)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="noite"&gt;Noite (18h — 20h)&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="sabado"&gt;Sábado de manhã&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;option value="flexivel"&gt;Horário flexível&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label for="mensagem"&gt;Como podemos ajudar? &lt;span style="color:var(--gray);font-weight:400;"&gt;(opcional)&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;textarea id="mensagem" placeholder="Conte um pouco sobre sua situação ou dúvida..."&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;button type="submit" class="btn btn-primary form-submit"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Solicitar agendamento →</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;p class="form-privacy"&gt;🔒 Seus dados são confidenciais e nunca compartilhados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="form-wpp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Ou fale direto pelo WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- Mensagem de sucesso --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="form-success" id="formSuccess"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="success-icon"&gt;✅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Solicitação enviada!&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Nossa equipe entrará em contato em até 2 horas no horário comercial para confirmar sua avaliação.&lt;br/&gt;&lt;br/&gt;Fique atento ao WhatsApp e ao e-mail informados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-primary" style="margin-top:1.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>Falar pelo WhatsApp também →</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;&lt;!-- /form-box --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;&lt;!-- /contato-layout --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== MAPA ==================== --&gt;</p>
+<p class="p1">&lt;section class="mapa-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="mapa-layout reveal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Info do endereço --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mapa-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Localização&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Como nos &lt;em&gt;encontrar&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Estamos localizados em Limeira, SP, em endereço de fácil acesso com estacionamento próprio disponível para pacientes.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mapa-address"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Endereço completo&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>R. João Kuhl Filho, 101&lt;br/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Limeira — São Paulo&lt;br/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;CEP: [xxxxx-xxx]&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mapa-como-chegar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chegar-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;🚗&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>De carro: acesso direto pela [via principal], com estacionamento próprio gratuito.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chegar-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;🚌&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>De ônibus: linhas [números] passam próximo ao endereço.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chegar-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;🅿️&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Estacionamento próprio disponível para todos os pacientes.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="chegar-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;♿&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Acessibilidade total — rampas e espaços adaptados.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-top:2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP"</p>
+<p class="p1"><span class="Apple-converted-space">             </span>target="_blank" class="btn btn-outline-gold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>📍 Abrir no Google Maps →</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Mapa embed --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mapa-embed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;iframe</p>
+<p class="p1"><span class="Apple-converted-space">          </span>class="mapa-real"</p>
+<p class="p1"><span class="Apple-converted-space">          </span>src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.123456789!2d-47.401234!3d-22.564321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.+Jo%C3%A3o+Kuhl+Filho%2C+101%2C+Limeira%2C+SP!5e0!3m2!1spt-BR!2sbr!4v1234567890"</p>
+<p class="p1"><span class="Apple-converted-space">          </span>allowfullscreen="" loading="lazy"</p>
+<p class="p1"><span class="Apple-converted-space">          </span>referrerpolicy="no-referrer-when-downgrade"</p>
+<p class="p1"><span class="Apple-converted-space">          </span>title="Localização Instituto Evolução"</p>
+<p class="p1"><span class="Apple-converted-space">          </span>style="filter:grayscale(40%) invert(5%);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/iframe&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CANAIS DE ATENDIMENTO ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Canais disponíveis&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Escolha como &lt;em&gt;prefere falar&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:540px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Todos os canais são atendidos diretamente pela equipe do Instituto — sem robô, sem terceirizado, sem demora.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="canais-grid reveal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="canal-card canal-wpp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="canal-icon"&gt;💬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;WhatsApp&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Canal mais rápido. Resposta em até 2 horas no horário comercial. Ideal para agendamentos e dúvidas rápidas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-primary" style="background:#25D366;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Falar agora →</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="canal-card canal-insta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="canal-icon"&gt;📸&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Instagram&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Acompanhe conteúdo, bastidores do Instituto e tire dúvidas pelo direct. Respondemos todas as mensagens.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" class="btn btn-outline-gold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>@instituto.evolucao →</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="canal-card canal-form"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="canal-icon"&gt;📋&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Formulário&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Preencha o formulário acima com suas informações e nossa equipe entra em contato para confirmar o agendamento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#formContainer" class="btn btn-secondary" onclick="document.getElementById('nome').focus()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Preencher agora →</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FAQ DE CONTATO ==================== --&gt;</p>
+<p class="p1">&lt;section class="faq-contato"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Dúvidas antes do contato&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Perguntas &lt;em&gt;frequentes&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="faq-grid reveal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Em quanto tempo recebo retorno após enviar o formulário?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Nossa equipe responde em até 2 horas no horário comercial (segunda a sexta, 08h–20h; sábado, 08h–13h). Mensagens enviadas fora desse horário são respondidas na abertura do próximo dia útil.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Atendem por convênio ou plano de saúde?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Não. O Instituto Evolução atende exclusivamente pelo modelo particular. Essa escolha garante que não haja limitações de tempo, procedimento ou dedicação por consulta. Emitimos recibo para que você possa solicitar reembolso à sua operadora, conforme a política de cada convênio.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Preciso de encaminhamento para agendar uma consulta?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Não. Você pode agendar diretamente sem necessidade de encaminhamento médico — tanto para consultas médicas quanto para fisioterapia, Pilates e academia. Basta entrar em contato e nossa equipe orienta o próximo passo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Como funciona o agendamento de primeira consulta?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Você entra em contato pelo formulário, WhatsApp ou Instagram. Nossa equipe responde para entender sua necessidade e confirmar disponibilidade. Você escolhe o horário mais conveniente e recebe a confirmação. Sem burocracia, sem depósito antecipado.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Há estacionamento disponível?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim. O Instituto Evolução conta com estacionamento próprio e gratuito para todos os pacientes. Não há necessidade de se preocupar com vagas na rua ou custos adicionais de estacionamento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso cancelar ou remarcar um agendamento?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim. Pedimos apenas que cancelamentos e remarcações sejam comunicados com pelo menos 24 horas de antecedência, pelo mesmo canal em que o agendamento foi confirmado. Isso nos permite oferecer o horário a outro paciente que precise.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>O Instituto é acessível para pessoas com mobilidade reduzida?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim. O espaço foi projetado com acessibilidade total — rampas de acesso, banheiros adaptados e espaços dimensionados para cadeirantes e pessoas com mobilidade reduzida. Caso necessite de alguma adaptação específica, informe no agendamento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Qual a forma de pagamento aceita?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Aceitamos as principais formas de pagamento: PIX, cartão de crédito e débito, e dinheiro. Parcelamento no cartão de crédito disponível conforme o serviço. Informe sua preferência no agendamento ou diretamente na recepção.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CTA FINAL ==================== --&gt;</p>
+<p class="p1">&lt;section class="cta-final"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="justify-content:center;"&gt;Sem desculpas para esperar&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title" style="max-width:560px;margin:0 auto 1.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>O primeiro passo é &lt;em&gt;mais simples do que parece&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:460px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Uma mensagem. Uma resposta em até 2 horas. Uma avaliação que pode mudar sua relação com saúde para sempre.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-primary" style="background:#25D366;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg width="18" height="18" viewBox="0 0 24 24" fill="white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Falar pelo WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#formContainer" class="btn btn-outline-gold"&gt;Preencher formulário →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html" class="btn btn-secondary"&gt;Voltar ao início&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Reforço de confiança --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:3rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.06);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:1.75rem;color:var(--gold);line-height:1;"&gt;+500&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.75rem;color:var(--gray);margin-top:4px;"&gt;Pacientes atendidos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="width:1px;height:40px;background:rgba(255,255,255,0.08);"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:1.75rem;color:var(--gold);line-height:1;"&gt;2h&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.75rem;color:var(--gray);margin-top:4px;"&gt;Tempo máximo de resposta&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="width:1px;height:40px;background:rgba(255,255,255,0.08);"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:1.75rem;color:var(--gold);line-height:1;"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.75rem;color:var(--gray);margin-top:4px;"&gt;Minutos de espera&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="width:1px;height:40px;background:rgba(255,255,255,0.08);"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:1.75rem;color:var(--gold);line-height:1;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.75rem;color:var(--gray);margin-top:4px;"&gt;Avaliação dos pacientes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FOOTER ==================== --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" aria-label="Instagram"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" aria-label="WhatsApp"&gt;WA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" aria-label="Localização"&gt;📍&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;O Instituto&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#instituto"&gt;Nossa história&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="equipe.html"&gt;Equipe&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#metodologia"&gt;Metodologia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#ambiente"&gt;Estrutura&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Especialidades&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-medica.html"&gt;Consultas Médicas&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-laboratorio.html"&gt;Laboratório&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-fisioterapia.html"&gt;Fisioterapia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-academia.html"&gt;Academia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-pilates.html"&gt;Pilates&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Contato&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="contato.html"&gt;Agendar avaliação&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="blog.html"&gt;Blog / Insights&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank"&gt;Como chegar&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Instituto Evolução — Todos os direitos reservados · Limeira, SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="contato.html"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WhatsApp Float --&gt;</p>
+<p class="p1">&lt;a href="https://wa.me/5519900000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg viewBox="0 0 24 24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/svg&gt;</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Navbar scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navbar.classList.toggle('scrolled', window.scrollY &gt; 40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hamburger</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hamburger = document.getElementById('hamburger');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navMobile = document.getElementById('navMobile');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hamburger.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMobile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Formulário</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function submitForm(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn = e.target.querySelector('button[type="submit"]');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent = 'Enviando...';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('formContainer').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('formSuccess').classList.add('show');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, 1200);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// FAQ accordion</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function toggleFaq(el) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const item = el.parentElement;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isOpen = item.classList.contains('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.faq-item').forEach(i =&gt; i.classList.remove('open'));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!isOpen) item.classList.add('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Scroll reveal</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reveals = document.querySelectorAll('.reveal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries.forEach(e =&gt; { if (e.isIntersecting) e.target.classList.add('visible'); });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, { threshold: 0.1 });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>reveals.forEach(r =&gt; observer.observe(r));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

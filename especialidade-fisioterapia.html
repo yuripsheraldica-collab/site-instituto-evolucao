@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Fisioterapia de alto padrão — Instituto Evolução, Limeira SP"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Fisioterapia | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Layout principal */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 5rem; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--dark-3), var(--dark-4));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); aspect-ratio: 4/5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; font-size: 5rem; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-visual-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-badge-float {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; bottom: -1rem; right: -1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--gold); color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.25rem; border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.82rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; line-height: 1.3;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-text p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.97rem; color: rgba(255,255,255,0.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.9; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 2px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Features list */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-features-list { display: flex; flex-direction: column; gap: 0.75rem; margin: 2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item:hover { border-color: rgba(201,169,110,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item h4 { font-size: 0.9rem; color: var(--white); margin-bottom: 0.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.esp-feat-item p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Serviços grid */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.services-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); position: relative; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: ''; position: absolute; top: 0; left: 0; right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 2px; background: linear-gradient(90deg, var(--gold), transparent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-4px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card:hover::before { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-icon { font-size: 1.75rem; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card h3 { font-size: 0.95rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-list { display: flex; flex-direction: column; gap: 0.3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-list span {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem; color: rgba(255,255,255,0.5);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-list span::before { content: '✓'; color: var(--gold); font-size: 0.7rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Processo / etapas */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.etapas-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.etapa-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.etapa-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.etapa-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.etapa-card h4 { font-size: 0.92rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.etapa-card p<span class="Apple-converted-space">  </span>{ font-size: 0.8rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Resultados / estatísticas */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultados-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-card:hover { border-color: rgba(201,169,110,0.25); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-valor {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gold); line-height: 1; margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.resultado-label { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Depoimento destaque */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque::before {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>content: '"'; font-family: var(--font-serif); font-size: 6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.08); position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: -1rem; left: 1.5rem; line-height: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque blockquote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-style: italic; font-size: 1.05rem; color: rgba(255,255,255,0.8);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.8; margin-bottom: 1.5rem; position: relative; z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-destaque-author { display: flex; align-items: center; gap: 1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-av {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 44px; height: 44px; border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--gold-dark), var(--gold));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem; font-weight: 700; color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-name<span class="Apple-converted-space">  </span>{ font-size: 0.9rem; font-weight: 600; color: var(--white); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.depo-meta<span class="Apple-converted-space">  </span>{ font-size: 0.75rem; color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* FAQ */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.25rem 1.5rem; cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.92rem; font-weight: 600; color: var(--white);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-question:hover { color: var(--gold); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-arrow { font-size: 0.8rem; color: var(--gold); transition: var(--transition); flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-arrow { transform: rotate(180deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-height: 0; overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: max-height 0.4s ease, padding 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-item.open .faq-answer { max-height: 300px; padding: 0 1.5rem 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.faq-answer p { font-size: 0.88rem; color: var(--gray); line-height: 1.75; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Highlight info box */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(201,169,110,0.07); border: 1px solid rgba(201,169,110,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); padding: 1.5rem 2rem; margin: 2rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box h4 { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.info-box p<span class="Apple-converted-space">  </span>{ font-size: 0.88rem; color: rgba(255,255,255,0.7); margin: 0; line-height: 1.75; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Outras especialidades */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outras-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.5rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition); display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card span { display: block; font-size: 2rem; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card h4 { font-size: 0.88rem; color: var(--white); margin-bottom: 0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.outra-card p<span class="Apple-converted-space">  </span>{ font-size: 0.75rem; color: var(--gray); line-height: 1.6; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.services-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.etapas-grid<span class="Apple-converted-space">    </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.resultados-grid{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.outras-grid<span class="Apple-converted-space">    </span>{ grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.esp-layout <span class="Apple-converted-space">    </span>{ grid-template-columns: 1fr; gap: 3rem; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.services-grid<span class="Apple-converted-space">  </span>{ grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.etapas-grid<span class="Apple-converted-space">    </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.resultados-grid{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.outras-grid<span class="Apple-converted-space">    </span>{ grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.esp-badge-float{ display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NAVBAR ==================== --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades" class="active"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#agendar" class="btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto"<span class="Apple-converted-space">      </span>onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#equipe" <span class="Apple-converted-space">        </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html" <span class="Apple-converted-space">                </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#agendar" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PAGE HERO ==================== --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt; &lt;span&gt;›&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Fisioterapia</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="margin-bottom:1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="badge badge-gold"&gt;🦴 Especialidade 03&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title" style="max-width:640px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Fisioterapia com foco em &lt;em&gt;recuperação total&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Reabilitação funcional com abordagem individualizada, técnicas avançadas e integração clínica — para você recuperar não apenas o movimento, mas a qualidade de vida.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#servicos" class="btn btn-secondary"&gt;Ver serviços&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== SOBRE ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-layout reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;Fisioterapia integrada&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Recuperar o movimento é &lt;em&gt;recuperar a vida&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;A fisioterapia vai muito além de aliviar a dor. Quando bem aplicada, restaura função, previne recidivas e transforma a relação do paciente com o próprio corpo. No Instituto Evolução, cada protocolo é construído do zero — sem receitas prontas, sem sessões cronometradas, sem atalhos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Nosso fisioterapeuta atua em comunicação direta com o médico e o educador físico do Instituto, garantindo que a reabilitação seja parte de um plano de saúde completo — não um episódio isolado no seu cuidado.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Fisioterapia de verdade não termina quando a dor some. Termina quando o paciente recuperou a confiança plena no próprio corpo."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="display:flex;gap:1rem;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="artigo-dor-lombar.html" class="btn btn-outline-gold"&gt;Ler sobre lombar →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="position:relative;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>🦴</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-visual-label"&gt;Fisioterapia · IE&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="esp-badge-float"&gt;Reabilitação&lt;br&gt;completa&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== RESULTADOS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Em números&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Resultados que &lt;em&gt;comprovam&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="resultados-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;96%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;dos pacientes relatam melhora significativa após 4 semanas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;+300&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;pacientes reabilitados com retorno pleno à atividade&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;minutos de espera — sessões sempre no horário marcado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="resultado-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-valor"&gt;100%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="resultado-label"&gt;dos protocolos são individualizados — nenhum genérico&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== SERVIÇOS ==================== --&gt;</p>
+<p class="p1">&lt;section id="servicos" style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Nossas especialidades&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que &lt;em&gt;tratamos&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Cobertura ampla de condições musculoesqueléticas, neurológicas e funcionais, com abordagem baseada em evidência e foco no retorno à vida plena.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="services-grid"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🏃&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Fisioterapia Esportiva&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reabilitação de lesões relacionadas ao esporte e atividade física, com protocolos de retorno seguro e otimização de performance.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Lesões musculares e tendinosas&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Entorses e ligamentares&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Síndrome do corredor e do nadador&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Retorno esportivo progressivo&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🦴&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Fisioterapia Ortopédica&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Tratamento de condições musculoesqueléticas — dores, limitações de movimento e disfunções articulares com técnicas manuais avançadas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Dor lombar e cervical&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Tendinites e bursites&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Artrose e artrites&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Hérnias e protrusões discais&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🔧&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;RPG — Reeducação Postural&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Método global que trata as cadeias musculares de forma integrada, corrigindo desequilíbrios posturais que causam dores crônicas e compensações.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Correção de desvios posturais&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Tratamento de dores crônicas&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Melhora de mobilidade global&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Prevenção de recidivas&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Pré e Pós-Operatório&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Preparação física para cirurgias eletivas e reabilitação completa no pós-operatório — reduzindo tempo de recuperação e complicações.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Fisioterapia pré-operatória&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Reabilitação pós-cirúrgica&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Artroplastias (joelho e quadril)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Cirurgias de coluna e ombro&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🧠&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Fisioterapia Neurológica&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reabilitação funcional para condições neurológicas — melhorando controle motor, equilíbrio e independência nas atividades diárias.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Sequelas de AVC&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Doença de Parkinson&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Neuropatias periféricas&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Reabilitação de equilíbrio e marcha&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-icon"&gt;🤰&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Fisioterapia para a Mulher&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Abordagem especializada para as demandas físicas exclusivas da saúde feminina em todas as fases da vida.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="service-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Fisioterapia na gestação&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Reabilitação pós-parto&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Disfunções do assoalho pélvico&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span&gt;Menopausa e osteoporose&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== COMO FUNCIONA ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Nosso processo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Como é a sua &lt;em&gt;jornada de reabilitação&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="etapas-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="etapa-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="etapa-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Avaliação inicial&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Avaliação cinesiológica completa — testes funcionais, análise postural e escuta detalhada da sua queixa principal e histórico.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="etapa-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="etapa-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Diagnóstico funcional&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Identificação das disfunções, compensações e causas raiz — não apenas do sintoma, mas do que gerou o problema.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="etapa-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="etapa-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Protocolo individualizado&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Plano de tratamento exclusivo com técnicas selecionadas para o seu caso, objetivos e ritmo de evolução.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="etapa-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="etapa-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Progressão e alta&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Monitoramento contínuo, ajustes de protocolo e critérios claros de alta — você sabe exatamente onde está e para onde vai.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="info-box" style="margin-top:3rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h4&gt;🔗 Integração com a equipe do Instituto&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;O fisioterapeuta se comunica diretamente com o médico e o educador físico do Instituto. Se você também faz Pilates ou academia aqui, os profissionais alinham os protocolos para que não haja conflito — e para que cada disciplina potencialize a outra.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== TÉCNICAS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Recursos e técnicas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Abordagem &lt;em&gt;baseada em evidência&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="esp-features-list reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🖐️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Terapia Manual&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Mobilização articular, manipulação vertebral, liberação miofascial e técnicas osteopáticas para restaurar mobilidade e reduzir dor com eficiência e segurança.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;⚡&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Eletroterapia e Recursos Físicos&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Ultrassom terapêutico, TENS, corrente russa e outros recursos eletroterapêuticos para controle da dor, aceleração da cicatrização e fortalecimento muscular.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🎯&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Dry Needling&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Agulhamento seco para tratamento de pontos-gatilho miofasciais — altamente eficaz em dores musculares crônicas e tensão acumulada por padrões posturais inadequados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🏋️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Cinesioterapia e Exercício Terapêutico&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Prescrição de exercícios específicos para reabilitação, fortalecimento e prevenção de recidivas — progressivos, seguros e integrados ao seu nível de condicionamento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🩹&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Bandagem Funcional e Kinesio Taping&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Suporte articular e muscular com técnicas de bandagem para proteção, controle de edema e facilitação neuromuscular durante a reabilitação ativa.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="esp-feat-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="esp-feat-icon"&gt;🧘&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Reeducação Postural Global (RPG)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Método de tratamento postural que atua sobre as cadeias musculares de forma integrada, corrigindo desequilíbrios globais que causam dores crônicas e recorrentes.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== DEPOIMENTO ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Experiência real&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O que nossos pacientes &lt;em&gt;dizem&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="depo-destaque reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Recuperei movimento que achei que tinha perdido para sempre. Cheguei ao Instituto após uma cirurgia de joelho sem conseguir dobrar a perna. Em 3 meses de fisioterapia, voltei a praticar ciclismo. O fisioterapeuta é extraordinário — técnico e humano ao mesmo tempo. Cada sessão era pensada especificamente para o meu momento."</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-av"&gt;RL&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-name"&gt;Renata L.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-meta"&gt;Fisioterapia pós-cirúrgica · 1 ano e meio de acompanhamento&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="margin-left:auto;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="color:var(--gold);letter-spacing:2px;font-size:0.9rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque reveal" style="padding:1.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote style="font-size:0.92rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Cheguei com dores crônicas que me impediam de trabalhar. Em 3 meses de tratamento integrado com fisioterapia e medicina, voltei a correr. Em 8 meses, completei minha primeira corrida de rua com 52 anos."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-av"&gt;RS&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-name"&gt;Ricardo S.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-meta"&gt;Fisioterapia + Medicina · 52 anos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.85rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="depo-destaque reveal" style="padding:1.75rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;blockquote style="font-size:0.92rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Nunca tinha feito fisioterapia com tanta atenção. O profissional realmente entende o que está acontecendo com o seu corpo e explica cada etapa do tratamento. Me sinto segura em cada sessão."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="depo-destaque-author"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="depo-av"&gt;MC&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-name"&gt;Mariana C.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="depo-meta"&gt;Fisioterapia ortopédica · 6 meses&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div style="margin-left:auto;color:var(--gold);font-size:0.85rem;"&gt;★★★★★&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FAQ ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Dúvidas frequentes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Perguntas &lt;em&gt;comuns&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="faq-list"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Preciso de encaminhamento médico para fazer fisioterapia?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Não é obrigatório. O fisioterapeuta é um profissional de saúde autônomo e pode atender diretamente — inclusive realizando diagnóstico cinesiológico funcional. No entanto, se você já é paciente do médico do Instituto, o encaminhamento interno facilita a integração do seu prontuário e do plano de cuidado.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Quantas sessões precisarei fazer?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Depende da condição, da sua evolução e dos objetivos. Na avaliação inicial, o fisioterapeuta apresenta uma estimativa realista de número de sessões e frequência ideal. Não trabalhamos com pacotes fechados — o tratamento termina quando os critérios clínicos e funcionais de alta são atingidos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>As sessões têm tempo fixo?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;As sessões têm duração média de 50 a 60 minutos, mas o tempo é adaptado à necessidade do paciente e ao protocolo em andamento. Nunca cronometramos o atendimento — o que importa é a qualidade e a completude de cada sessão.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Atendem pós-operatório logo após a alta hospitalar?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim. Atendemos reabilitação pós-operatória desde as fases iniciais, em alinhamento com as orientações do cirurgião responsável. Quanto mais precoce o início da fisioterapia (dentro dos critérios clínicos), melhores e mais rápidos tendem a ser os resultados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Posso fazer fisioterapia e Pilates ao mesmo tempo?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Sim, e frequentemente recomendamos essa combinação. O fisioterapeuta e o instrutor de Pilates do Instituto se comunicam diretamente para alinhar os protocolos — garantindo que as duas práticas se potencializem, sem sobrecargas ou contradições no seu plano de tratamento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="faq-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-question" onclick="toggleFaq(this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Atendem por convênio?</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span class="faq-arrow"&gt;▼&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="faq-answer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;O Instituto Evolução atende exclusivamente pelo modelo particular. Emitimos recibo detalhado para que você possa solicitar reembolso à sua operadora de plano de saúde, conforme a política de cada convênio.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== OUTRAS ESPECIALIDADES ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Explore também&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Outras &lt;em&gt;especialidades&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="outras-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-medica.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🩺&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Consultas Médicas&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Atendimento clínico completo e sem pressa.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-laboratorio.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🔬&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Laboratório&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Exames completos integrados ao prontuário.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-academia.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;💪&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Academia&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Fitness de alto padrão com prescrição profissional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="especialidade-pilates.html" class="outra-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;🤸&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Pilates&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Método com turmas reduzidas e indicação clínica.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CTA ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="justify-content:center;"&gt;Próximo passo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Pronto para &lt;em&gt;recuperar seu movimento?&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:480px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Agende sua avaliação fisioterapêutica. Respondemos em até 2 horas no horário comercial.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FOOTER ==================== --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" aria-label="Instagram"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" aria-label="WhatsApp"&gt;WA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" aria-label="Localização"&gt;📍&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;O Instituto&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#instituto"&gt;Nossa história&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#equipe"&gt;Equipe&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#metodologia"&gt;Metodologia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#ambiente"&gt;Estrutura&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Especialidades&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-medica.html"&gt;Consultas Médicas&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-laboratorio.html"&gt;Laboratório&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-fisioterapia.html"&gt;Fisioterapia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-academia.html"&gt;Academia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-pilates.html"&gt;Pilates&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Contato&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="blog.html"&gt;Blog / Insights&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank"&gt;Como chegar&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Instituto Evolução — Todos os direitos reservados · Limeira, SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WhatsApp Float --&gt;</p>
+<p class="p1">&lt;a href="https://wa.me/5519900000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg viewBox="0 0 24 24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/svg&gt;</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Navbar scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navbar.classList.toggle('scrolled', window.scrollY &gt; 40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hamburger</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hamburger = document.getElementById('hamburger');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navMobile = document.getElementById('navMobile');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hamburger.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMobile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// FAQ accordion</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function toggleFaq(el) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const item = el.parentElement;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isOpen = item.classList.contains('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('.faq-item').forEach(i =&gt; i.classList.remove('open'));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!isOpen) item.classList.add('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Scroll reveal</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reveals = document.querySelectorAll('.reveal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries.forEach(e =&gt; { if (e.isIntersecting) e.target.classList.add('visible'); });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, { threshold: 0.1 });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>reveals.forEach(r =&gt; observer.observe(r));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>

@@ -1,0 +1,921 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Conheça a equipe multidisciplinar do Instituto Evolução — médicos, fisioterapeutas e educadores físicos comprometidos com sua saúde integral."/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Nossa Equipe | Instituto Evolução&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="style.css"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Hero complementar ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.equipe-hero-desc {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--gray); max-width: 580px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem; line-height: 1.75;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Card principal de membro ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-section:last-of-type { border-bottom: none; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-section:nth-child(even) { background: var(--dark-2); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-section:nth-child(odd)<span class="Apple-converted-space">  </span>{ background: var(--dark); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 380px 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 5rem; align-items: start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-layout.reverse { grid-template-columns: 1fr 380px; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-layout.reverse .membro-visual { order: 2; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-layout.reverse .membro-info<span class="Apple-converted-space">  </span>{ order: 1; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Foto / visual */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-visual { position: relative; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-photo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%; aspect-ratio: 3/4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--dark-3), var(--dark-4));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; color: var(--gray);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.82rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden; position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-photo-icon { font-size: 4rem; opacity: 0.4; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-photo-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.7rem; font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.14em; text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.4);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-specialty-badge {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; top: 1.25rem; left: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-cta-float {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: absolute; bottom: -1rem; right: -1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--gold); color: var(--dark);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.85rem 1.25rem; border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem; font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; line-height: 1.35;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Credenciais verticais */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-credentials-side {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column; gap: 0.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cred-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); font-size: 0.8rem; color: var(--gray);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cred-item:hover { border-color: rgba(201,169,110,0.25); color: var(--white); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cred-icon { font-size: 1rem; flex-shrink: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cred-label { font-weight: 600; color: var(--white); margin-bottom: 0.1rem; font-size: 0.78rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cred-value { font-size: 0.75rem; color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Info lateral */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-info { padding-top: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: rgba(201,169,110,0.4);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-name {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: clamp(1.8rem, 3vw, 2.5rem);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--white); line-height: 1.15; margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-role {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.88rem; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500; margin-bottom: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.04em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-bio p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem; color: rgba(255,255,255,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.9; margin-bottom: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 2px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Áreas de atuação */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-areas { margin: 2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-areas h4 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.areas-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.area-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: center; gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.83rem; color: rgba(255,255,255,0.65);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(255,255,255,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.area-item::before { content: '→'; color: var(--gold); font-size: 0.7rem; flex-shrink: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Formação */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-formacao { margin: 2rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-formacao h4 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.formacao-list { display: flex; flex-direction: column; gap: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.formacao-item {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; align-items: flex-start; gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.85rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.08);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.formacao-item:hover { border-color: rgba(201,169,110,0.2); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.formacao-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.formacao-title { font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 0.15rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.formacao-sub <span class="Apple-converted-space">  </span>{ font-size: 0.75rem; color: var(--gray); }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* CTA por membro */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.membro-cta {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Seção — A equipe em conjunto ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.team-together {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-2); padding: 5rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-layout {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 5rem; align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-text p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.97rem; color: rgba(255,255,255,0.7);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.9; margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.05rem; color: var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-left: 2px solid var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding-left: 1.5rem; margin: 2rem 0; line-height: 1.65;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-points {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem; margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-point {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius); padding: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-point:hover { border-color: rgba(201,169,110,0.3); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-point h4 { font-size: 0.85rem; color: var(--gold); margin-bottom: 0.35rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-point p<span class="Apple-converted-space">  </span>{ font-size: 0.78rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-visual {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--dark-3), var(--dark-4));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid rgba(201,169,110,0.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); aspect-ratio: 1;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex; flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center; justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-icons { display: flex; gap: 1.5rem; font-size: 2.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.together-visual p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.78rem; color: var(--gray);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.08em; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Valores compartilhados ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valores-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(3,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valor-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 2rem; text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valor-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valor-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; margin-bottom: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valor-card h4 { font-size: 0.92rem; color: var(--gold); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.valor-card p<span class="Apple-converted-space">  </span>{ font-size: 0.82rem; color: var(--gray); line-height: 1.7; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Processo de seleção ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.selecao-grid {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid; grid-template-columns: repeat(4,1fr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1.5rem; margin-top: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.selecao-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--dark-3); border: 1px solid rgba(201,169,110,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius-lg); padding: 1.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center; transition: var(--transition);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.selecao-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-3px); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.selecao-num {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: var(--font-serif); font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: rgba(201,169,110,0.2); line-height: 1; margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.selecao-card h4 { font-size: 0.9rem; color: var(--white); margin-bottom: 0.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.selecao-card p<span class="Apple-converted-space">  </span>{ font-size: 0.78rem; color: var(--gray); line-height: 1.65; margin: 0; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ===== Responsive ===== */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:1024px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-layout,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-layout.reverse { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-layout.reverse .membro-visual,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-layout.reverse .membro-info { order: unset; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-photo { aspect-ratio: 4/3; max-height: 340px; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-cta-float { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.together-layout { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.selecao-grid { grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.valores-grid { grid-template-columns: repeat(2,1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:768px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.membro-section { padding: 3.5rem 0; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.areas-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.together-points { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.valores-grid { grid-template-columns: 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.selecao-grid { grid-template-columns: 1fr 1fr; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== NAVBAR ==================== --&gt;</p>
+<p class="p1">&lt;nav class="navbar" id="navbar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html" class="nav-logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-main"&gt;Instituto Evolução&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="nav-logo-sub"&gt;Fitness · Health&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="nav-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#instituto"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="equipe.html" class="active"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#especialidades"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="blog.html"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="index.html#agendar" class="btn btn-primary nav-cta"&gt;Agendar&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="nav-hamburger" id="hamburger" aria-label="Menu"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/button&gt;</p>
+<p class="p1">&lt;/nav&gt;</p>
+<p class="p1">&lt;div class="nav-mobile" id="navMobile"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#instituto"<span class="Apple-converted-space">      </span>onclick="closeMobile()"&gt;O Instituto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="equipe.html" <span class="Apple-converted-space">              </span>onclick="closeMobile()"&gt;Equipe&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#especialidades" onclick="closeMobile()"&gt;Especialidades&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="blog.html" <span class="Apple-converted-space">                </span>onclick="closeMobile()"&gt;Blog&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;a href="index.html#agendar" class="btn btn-primary" onclick="closeMobile()"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PAGE HERO ==================== --&gt;</p>
+<p class="p1">&lt;section class="page-hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="breadcrumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html"&gt;Início&lt;/a&gt; &lt;span&gt;›&lt;/span&gt; Nossa Equipe</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;As pessoas por trás do Instituto&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="section-title" style="max-width:680px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>A equipe que faz &lt;em&gt;a diferença&lt;/em&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="equipe-hero-desc"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Profissionais escolhidos não apenas pelo currículo, mas pela filosofia. Cada membro compartilha o mesmo compromisso com excelência, humanização e cuidado genuíno.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.5rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:2rem;color:var(--gold);line-height:1;"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.78rem;color:var(--gray);margin-top:4px;"&gt;Especialistas integrados&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="width:1px;background:rgba(255,255,255,0.08);"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:2rem;color:var(--gold);line-height:1;"&gt;+30&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.78rem;color:var(--gray);margin-top:4px;"&gt;Anos de experiência combinada&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="width:1px;background:rgba(255,255,255,0.08);"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-family:var(--font-serif);font-size:2rem;color:var(--gold);line-height:1;"&gt;100%&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="font-size:0.78rem;color:var(--gray);margin-top:4px;"&gt;Comprometidos com você&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== MEMBRO 01 — MÉDICO ==================== --&gt;</p>
+<p class="p1">&lt;section class="membro-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="membro-layout reveal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Visual --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="membro-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-photo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-specialty-badge"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="badge badge-gold"&gt;🩺 Medicina&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-photo-icon"&gt;👨‍⚕️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-photo-label"&gt;Foto profissional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-cta-float"&gt;Clínica&lt;br&gt;Médica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Credenciais --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-credentials-side"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;CRM&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Número · Estado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Especialização&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Medicina Preventiva e Saúde Integral&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Experiência&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;+10 anos de experiência clínica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🏛️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Formação&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Medicina · Universidade Federal&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Info --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="membro-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-num"&gt;Profissional 01 / 03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="membro-name"&gt;Dr(a). [Nome Completo]&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-role"&gt;Médico(a) Clínico(a) · Medicina Preventiva&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-bio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Especialista em medicina preventiva e saúde integral, com atuação clínica focada na investigação completa do paciente. Seu diferencial está em unir dados laboratoriais objetivos à escuta clínica aprofundada — resultando em diagnósticos precisos e planos de cuidado que realmente fazem sentido para cada indivíduo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Formado(a) com distinção, acumulou experiência em clínicas de alto padrão antes de integrar o Instituto Evolução, onde encontrou o ambiente ideal para exercer a medicina da forma em que acredita: sem pressa, sem burocracia e com compromisso genuíno com a evolução de cada paciente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Defensor(a) da medicina preventiva como filosofia — não como especialidade isolada. Acredita que a maioria das condições crônicas é evitável quando há monitoramento longitudinal, escuta real e um médico que conhece a história completa de quem atende.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Minha função não é apenas diagnosticar. É entender o contexto de vida de cada paciente e ajudá-lo a tomar melhores decisões sobre saúde — com informação, não com medo."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-areas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Áreas de atuação&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="areas-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Medicina preventiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Check-up completo e personalizado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Saúde metabólica e hormonal&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Interpretação de exames laboratoriais&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Medicina do estilo de vida&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Gestão de doenças crônicas&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Saúde cardiovascular preventiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Longevidade e qualidade de vida&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-formacao"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Formação e certificações&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="formacao-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Graduação em Medicina&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;Universidade Federal · [ano de conclusão]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;📋&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Residência Médica — Clínica Médica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;Hospital [nome] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Especialização em Medicina Preventiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;[Instituição] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;🔬&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Atualização contínua em Medicina do Estilo de Vida&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;Cursos e congressos nacionais e internacionais&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="especialidade-medica.html" class="btn btn-outline-gold"&gt;Ver especialidade médica →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar consulta&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== MEMBRO 02 — FISIOTERAPIA ==================== --&gt;</p>
+<p class="p1">&lt;section class="membro-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="membro-layout reverse reveal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Visual --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="membro-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-photo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-specialty-badge"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="badge badge-gold"&gt;🦴 Fisioterapia&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-photo-icon"&gt;🧑‍⚕️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-photo-label"&gt;Foto profissional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-cta-float"&gt;Reabilitação&lt;br&gt;Funcional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Credenciais --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-credentials-side"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;CREFITO&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Número · Estado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Especialização&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Fisioterapia Ortopédica e Esportiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Experiência&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;+10 anos de experiência clínica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🏛️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Formação&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Fisioterapia · Universidade [nome]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Info --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="membro-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-num"&gt;Profissional 02 / 03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="membro-name"&gt;Dr(a). [Nome Completo]&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-role"&gt;Fisioterapeuta · Ortopédica &amp; Esportiva&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-bio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Especialista em reabilitação funcional e ortopédica, com foco no retorno pleno do paciente às atividades que importam para sua vida — seja trabalho, esporte ou simples bem-estar cotidiano. Combina técnicas manuais avançadas com protocolos baseados em evidência científica para resultados duradouros e consistentes.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Acredita que a fisioterapia não termina quando a dor some — termina quando o paciente recuperou a confiança plena no próprio corpo. Essa filosofia se traduz em protocolos individualizados, em comunicação transparente sobre cada etapa do tratamento e em critérios claros de alta funcional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Atuou em clínicas de reabilitação e centros esportivos de alto nível antes de integrar o Instituto Evolução, onde a integração com medicina e educação física criou o modelo de cuidado em que sempre acreditou.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Fisioterapia de verdade não é sobre máquinas e sessões cronometradas. É sobre entender o movimento humano e devolver ao paciente o que ele perdeu — com segurança, método e respeito ao seu tempo."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-areas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Áreas de atuação&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="areas-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Fisioterapia ortopédica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Reabilitação esportiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;RPG — Reeducação Postural Global&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Pré e pós-operatório&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Terapia manual avançada&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Dry needling&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Fisioterapia neurológica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Saúde da mulher&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-formacao"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Formação e certificações&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="formacao-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Graduação em Fisioterapia&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;Universidade [nome] · [ano de conclusão]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;📋&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Especialização em Fisioterapia Ortopédica&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;[Instituição] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Certificação em Terapia Manual&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;[Método / Instituição] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;🎯&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Certificação em Dry Needling&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;[Método / Instituição] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="especialidade-fisioterapia.html" class="btn btn-outline-gold"&gt;Ver especialidade →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== MEMBRO 03 — PILATES &amp; FITNESS ==================== --&gt;</p>
+<p class="p1">&lt;section class="membro-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="membro-layout reveal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Visual --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="membro-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-photo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-specialty-badge"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="badge badge-gold"&gt;🤸 Pilates &amp; Fitness&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-photo-icon"&gt;🧑‍🏫&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-photo-label"&gt;Foto profissional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="membro-cta-float"&gt;Pilates &amp;&lt;br&gt;Academia&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Credenciais --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-credentials-side"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🏥&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;CREF&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Número · Estado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Certificação Pilates&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Método [nome] · Reconhecimento Internacional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Experiência&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;+8 anos de experiência&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="cred-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cred-icon"&gt;🏛️&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-label"&gt;Formação&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="cred-value"&gt;Educação Física · Universidade [nome]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Info --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="membro-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-num"&gt;Profissional 03 / 03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="membro-name"&gt;[Nome Completo]&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-role"&gt;Educador(a) Físico(a) · Pilates &amp; Treinamento&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-bio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Especialista em método Pilates e treinamento funcional, une conhecimento biomecânico profundo à percepção individual de cada aluno para prescrições precisas, seguras e altamente eficazes. Acredita que o movimento é medicamento — quando prescrito com conhecimento real.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Formado(a) em Educação Física com certificação em Pilates de reconhecimento internacional, desenvolveu sua trajetória em estúdios de alto padrão e centros de reabilitação — experiência que moldou uma visão integrada entre fitness, saúde e qualidade de movimento.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;No Instituto Evolução, atua em parceria direta com médico e fisioterapeuta, garantindo que cada prescrição de exercício esteja alinhada com a condição clínica do paciente — e que o treino seja parte real de um plano de saúde, não um complemento isolado.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"Não existe exercício genérico. Existe o exercício certo, para o corpo certo, no momento certo. Isso é o que prescrevemos aqui."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-areas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Áreas de atuação&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="areas-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Pilates solo e em aparelhos&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Pilates clínico integrado&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Treinamento funcional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Musculação e hipertrofia&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Avaliação física completa&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Pilates gestacional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Reabilitação ativa&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="area-item"&gt;Performance esportiva&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-formacao"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Formação e certificações&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="formacao-list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;🎓&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Graduação em Educação Física&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;Universidade [nome] · [ano de conclusão]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;🤸&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Certificação Pilates — Método [nome]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;Reconhecimento Internacional · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;📋&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Especialização em Treinamento Funcional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;[Instituição] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="formacao-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="formacao-icon"&gt;⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-title"&gt;Pilates Clínico e Gestacional&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="formacao-sub"&gt;[Método / Instituição] · [período]&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="membro-cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="especialidade-pilates.html" class="btn btn-outline-gold"&gt;Ver Pilates →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="especialidade-academia.html" class="btn btn-outline-gold"&gt;Ver Academia →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar aula&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== A EQUIPE EM CONJUNTO ==================== --&gt;</p>
+<p class="p1">&lt;section class="team-together"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="together-layout reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="together-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="section-label"&gt;O diferencial coletivo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 class="section-title"&gt;Uma equipe que &lt;em&gt;se comunica&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;O diferencial do Instituto Evolução não está apenas em cada profissional individualmente — está em como eles trabalham juntos. Em clínicas convencionais, médico, fisioterapeuta e educador físico raramente trocam informações sobre o mesmo paciente. Aqui, essa comunicação é rotina.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reuniões clínicas periódicas, prontuários integrados e protocolos compartilhados garantem que seu tratamento seja verdadeiramente holístico. Quando você entra com uma queixa, toda a equipe está ciente e alinhada — não apenas o profissional que você consulta naquele dia.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="together-quote"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>"A soma de três especialistas que se comunicam é infinitamente maior do que três especialistas que trabalham em silos."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="together-points"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="together-point"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;🔗 Prontuário integrado&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Todos os profissionais têm acesso ao histórico completo do paciente — nenhuma informação se perde entre especialidades.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="together-point"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;📋 Reuniões clínicas&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Casos complexos são discutidos em conjunto, com cada especialista contribuindo com sua perspectiva.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="together-point"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;🎯 Planos conjuntos&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;O plano de cuidado é construído coletivamente — sem contradições ou sobreposições entre especialidades.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="together-point"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h4&gt;📱 Comunicação direta&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Os profissionais se comunicam diretamente quando necessário, sem que você precise intermediar.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="together-visual"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="together-icons"&gt;🩺 🦴 🤸&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size:0.85rem;color:var(--gold);font-weight:600;letter-spacing:0.06em;"&gt;Medicina · Fisioterapia · Fitness&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="font-size:0.78rem;color:var(--gray);max-width:220px;"&gt;Três especialidades. Uma equipe. Um único objetivo: sua saúde.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== VALORES COMPARTILHADOS ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;O que nos une&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Valores que &lt;em&gt;guiam cada atendimento&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Profissionais diferentes, mesma filosofia. É esse alinhamento de valores que garante a consistência da experiência do Instituto Evolução.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="valores-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="valor-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="valor-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Escuta antes de qualquer conclusão&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Nenhum diagnóstico, prescrição ou protocolo começa antes de ouvir genuinamente o paciente. O tempo de escuta é inegociável.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="valor-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="valor-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Evidência sem dogmatismo&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Protocolos baseados em ciência — mas com flexibilidade para adaptar ao indivíduo. A evidência guia, o paciente define.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="valor-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="valor-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Transparência em cada etapa&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;O paciente sempre sabe o que está sendo feito, por que e o que esperar. Sem jargões, sem condescendência.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="valor-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="valor-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Atualização contínua&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;A equipe investe permanentemente em formação e atualização. O que funciona hoje pode ser aprimorado amanhã.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="valor-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="valor-num"&gt;05&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Humildade intelectual&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Reconhecer os limites do próprio conhecimento e buscar colaboração quando necessário. Ego não tem lugar no cuidado de pessoas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="valor-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="valor-num"&gt;06&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Resultado como responsabilidade&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;O sucesso do paciente é responsabilidade da equipe, não apenas do paciente. Esse compromisso muda tudo.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== PROCESSO DE SELEÇÃO ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark-2);padding:5rem 0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label"&gt;Como escolhemos nossa equipe&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;O critério que &lt;em&gt;não abrimos mão&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:560px;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Cada membro da equipe passa por um processo criterioso que vai muito além da análise de currículo.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="selecao-grid reveal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="selecao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="selecao-num"&gt;01&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Excelência técnica comprovada&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Formação sólida, experiência clínica real e histórico de resultados documentados. O básico que não é opcional.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="selecao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="selecao-num"&gt;02&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Alinhamento filosófico&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Compartilhar os valores do Instituto: humanização, escuta genuína e comprometimento real com o paciente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="selecao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="selecao-num"&gt;03&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Capacidade de integração&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Disposição e habilidade para trabalhar em equipe, comunicar-se com outros especialistas e construir planos conjuntos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="selecao-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="selecao-num"&gt;04&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h4&gt;Compromisso com evolução&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Investimento contínuo em atualização. Profissionais que nunca param de aprender — porque a saúde também não para.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== CTA ==================== --&gt;</p>
+<p class="p1">&lt;section style="background:var(--dark);padding:5rem 0;text-align:center;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section-label" style="justify-content:center;"&gt;Próximo passo&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 class="section-title"&gt;Pronto para conhecer a equipe &lt;em&gt;pessoalmente?&lt;/em&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="color:var(--gray);max-width:500px;margin:0 auto 2.5rem;font-size:0.95rem;line-height:1.75;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Agende sua avaliação inicial. Do primeiro contato ao atendimento, nossa equipe está pronta para receber você com a atenção que você merece.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar" class="btn btn-primary"&gt;Agendar avaliação →&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://wa.me/5519900000000" target="_blank" class="btn btn-secondary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>WhatsApp</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="contato.html" class="btn btn-outline-gold"&gt;Ver página de contato&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ==================== FOOTER ==================== --&gt;</p>
+<p class="p1">&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-main"&gt;Instituto Evolução&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-logo-sub"&gt;Fitness · Health&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Centro multidisciplinar de saúde e bem-estar de alto padrão, em Limeira, SP. Atendimento 100% particular, com hora marcada e sem espera.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="footer-social"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank" aria-label="Instagram"&gt;IG&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://wa.me/5519900000000" target="_blank" aria-label="WhatsApp"&gt;WA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank" aria-label="Localização"&gt;📍&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;O Instituto&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#instituto"&gt;Nossa história&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="equipe.html"&gt;Equipe&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#metodologia"&gt;Metodologia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#ambiente"&gt;Estrutura&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Especialidades&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-medica.html"&gt;Consultas Médicas&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-laboratorio.html"&gt;Laboratório&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-fisioterapia.html"&gt;Fisioterapia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-academia.html"&gt;Academia&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="especialidade-pilates.html"&gt;Pilates&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h5&gt;Contato&lt;/h5&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://wa.me/5519900000000" target="_blank"&gt;WhatsApp&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://www.instagram.com/instituto.evolucao/" target="_blank"&gt;Instagram&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="blog.html"&gt;Blog / Insights&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="contato.html"&gt;Página de contato&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;li&gt;&lt;a href="https://maps.google.com/?q=R.+João+Kuhl+Filho,+101,+Limeira,+SP" target="_blank"&gt;Como chegar&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-bottom"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Instituto Evolução — Todos os direitos reservados · Limeira, SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="index.html#agendar"&gt;Agendar avaliação&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- WhatsApp Float --&gt;</p>
+<p class="p1">&lt;a href="https://wa.me/5519900000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;svg viewBox="0 0 24 24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/svg&gt;</p>
+<p class="p1">&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Navbar scroll</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navbar = document.getElementById('navbar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>window.addEventListener('scroll', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navbar.classList.toggle('scrolled', window.scrollY &gt; 40);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Hamburger</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const hamburger = document.getElementById('hamburger');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const navMobile = document.getElementById('navMobile');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>hamburger.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.toggle('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function closeMobile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>hamburger.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>navMobile.classList.remove('open');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Scroll reveal</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const reveals = document.querySelectorAll('.reveal');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const observer = new IntersectionObserver(entries =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>entries.forEach(e =&gt; { if (e.isIntersecting) e.target.classList.add('visible'); });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, { threshold: 0.1 });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>reveals.forEach(r =&gt; observer.observe(r));</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
